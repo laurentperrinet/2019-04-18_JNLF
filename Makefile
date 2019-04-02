@@ -1,4 +1,4 @@
-default: github page
+default: github
 
 SRC=2019-04-05_BBCP_causal_kickoff
 

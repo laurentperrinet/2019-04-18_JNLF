@@ -1,6 +1,6 @@
-default: github
+default: github page
 
-SRC=2019-04-03_a_course_on_vision_and_modelization
+SRC=2019-04-05_BBCP_causal_kickoff
 
 edit:
 	atom $(SRC).py
@@ -8,20 +8,6 @@ edit:
 html:
 	#python3 $(SRC).py $(SRC).html
 	python3 $(SRC).py index.html
-
-figure1_a: figures/boutin-franciosini-ruffier-perrinet-19_figure1_a.svg
-	rsvg-convert figures/boutin-franciosini-ruffier-perrinet-19_figure1_a.svg -f png -d 450 -p 450 -o figures/boutin-franciosini-ruffier-perrinet-19_figure1_a.png
-
-figure1_b: figures/boutin-franciosini-ruffier-perrinet-19_figure1_b.svg
-	rsvg-convert figures/boutin-franciosini-ruffier-perrinet-19_figure1_b.svg -f png -d 450 -p 450 -o figures/boutin-franciosini-ruffier-perrinet-19_figure1_b.png
-
-figure1_c: figures/boutin-franciosini-ruffier-perrinet-19_figure1_c.svg
-	rsvg-convert figures/boutin-franciosini-ruffier-perrinet-19_figure1_c.svg -f png -d 450 -p 450 -o figures/boutin-franciosini-ruffier-perrinet-19_figure1_c.png
-
-figure1: figures/boutin-franciosini-ruffier-perrinet-19_figure1.svg
-	rsvg-convert figures/boutin-franciosini-ruffier-perrinet-19_figure1.svg -f png -d 450 -p 450 -o figures/boutin-franciosini-ruffier-perrinet-19_figure1.png
-
-figures: figure1 figure1_a figure1_b figure1_c
 
 page:
 	python3 $(SRC).py
@@ -39,5 +25,6 @@ github: html
 	open https://laurentperrinet.github.io/$(SRC)
 
 print: html
-	open -a /Applications/Chromium.app https://laurentperrinet.github.io/$(SRC)/?print-pdf&showNotes=true
+	#open -a /Applications/Chromium.app https://laurentperrinet.github.io/$(SRC)/?print-pdf&showNotes=true
 	#open "https://laurentperrinet.github.io/$(SRC)/?print-pdf&showNotes=true"
+	/Applications/Chromium.app/Contents/MacOS/Chromium --headless --disable-gpu --print-to-pdf=$(SRC).pdf "https://laurentperrinet.github.io/$(SRC)/?print-pdf"

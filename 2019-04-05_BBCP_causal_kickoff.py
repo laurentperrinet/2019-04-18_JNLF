@@ -84,6 +84,7 @@ Karl = s.content_imagelet(os.path.join(figpath_people, 'karl.jpg'), height_px)
 Rick = s.content_imagelet(os.path.join(figpath_people, 'rick.jpg'), height_px)
 Anna = s.content_imagelet(os.path.join(figpath_people, 'anna.jpg'), height_px)
 LM = s.content_imagelet(os.path.join(figpath_people, 'LM.png'), height_px)
+JB = s.content_imagelet(os.path.join(figpath_people, 'JB.jpg'), height_px)
 Fredo = s.content_imagelet(os.path.join(figpath_people, 'fredo.png'), height_px)
 Python = s.content_imagelet('https://www.python.org/static/community_logos/python-powered-h-140x182.png', height_px)
 s.meta['Acknowledgements'] =f"""
@@ -95,7 +96,7 @@ s.meta['Acknowledgements'] =f"""
     <li>Frédéric Chavane - INT</li>
 </ul>
 <BR>
-{Rick}{Karl}{LM}{Anna}{Fredo}<a href="https://github.com/laurentperrinet/slides.py">{Python}</a>
+{Rick}{Karl}{JB}{LM}{Anna}{Fredo}<a href="https://github.com/laurentperrinet/slides.py">{Python}</a>
     This work was supported by ANR project ANR-18-AAPG–“CAUSAL, Cognitive Architectures of  Causal Learning”.
 </small>
 

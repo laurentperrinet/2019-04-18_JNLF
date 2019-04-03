@@ -202,7 +202,7 @@ def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequenc
 
         surface = gz.Surface(W, H, bg_color=(0, 0, 0))
 
-        flash = gz.rectangle(xy=(W/2., H/2.), fill=(0,1,0), **s)
+        flash = gz.rectangle(xy=(W/2., H/2.), fill=(0, 1, 0), **s)
 
         if t_ < duration_flash:
             flash.draw(surface)
@@ -213,8 +213,8 @@ def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequenc
             rect.draw(surface)
 
         text = gz.text(f"{i+1:02d}/{len(seq):02d}", fontfamily="Impact",  fontsize=W/25,
-                            h_align="left", v_align="top",
-                          fill=(1,1,1), xy=(W/20, H/10), angle=0)
+                            h_align="right", v_align="top",
+                          fill=(1, 1, 1), xy=(W/10, H/10), angle=0)
         text.draw(surface)
         # print (surface.get_npimage().shape)
         return surface.get_npimage()

@@ -183,6 +183,7 @@ https://laurentperrinet.github.io/talk/2019-01-18-laconeu/
 N_seq = 60
 import os
 import numpy as np
+np.random.seed(42)
 def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequence.mp4'):
     import gizeh as gz
     import moviepy.editor as mpy
@@ -211,8 +212,8 @@ def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequenc
             rect = gz.rectangle(xy=(x, H/2.), fill=(1, 0, 0), **s)
             rect.draw(surface)
 
-        text = gz.text(f"{i:02d}/{len(seq):02d}", fontfamily="Impact",  fontsize=10,
-                          fill=(1,1,1), xy=(10,10), angle=0)
+        text = gz.text(f"{i:02d}/{len(seq):02d}", fontfamily="Impact",  fontsize=W/25,
+                          fill=(1,1,1), xy=(W/10, H/10), angle=0)
         text.draw(surface)
         # print (surface.get_npimage().shape)
         return surface.get_npimage()

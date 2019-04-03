@@ -180,6 +180,67 @@ https://laurentperrinet.github.io/talk/2019-01-18-laconeu/
 * (SHOW TITLE)
 
 """)
+N_seq = 60
+import os
+import numpy as np
+def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequence.mp4'):
+    import gizeh as gz
+    import moviepy.editor as mpy
+
+    r = W*radius
+    duration = T * len(seq)
+    # print(seq)
+    duration_flash = .05
+    s = dict(lx=r, ly=r)
+
+    def make_frame(t):
+        i = int(t/T)
+        dir = seq[i]
+        t_ = t - i*T
+        # print(i, dir, t_)
+
+        surface = gz.Surface(W, H, bg_color=(0, 0, 0))
+
+        flash = gz.rectangle(xy=(W/2., H/2.), fill=(0,1,0), **s)
+
+        if t_ < duration_flash:
+            flash.draw(surface)
+
+        else:
+            x = W/2. * (1 - dir*t_)
+            rect = gz.rectangle(xy=(x, H/2.), fill=(1, 0, 0), **s)
+            rect.draw(surface)
+
+        text = gz.text(f"{i:02d}/{len(seq):02d}", fontfamily="Impact",  fontsize=10,
+                          fill=(1,1,1), xy=(10,10), angle=0)
+        text.draw(surface)
+        # print (surface.get_npimage().shape)
+        return surface.get_npimage()
+
+    clip = mpy.VideoClip(make_frame, duration=duration)
+    clip.write_videofile(figname, fps=fps)
+    return 'ok'
+
+
+figname='randomblock.mp4'
+seq = -1 + 2 * (np.random.rand(N_seq)<.75)
+seq[N_seq//2:] = -1 + 2 * (np.random.rand(N_seq//2)>.75)
+# print(seq)
+figname = os.path.join(figpath_talk, figname)
+if not os.path.isfile(figname): create_movie(seq, figname=figname)
+
+
+s.add_slide(content="""
+    <video loop="1" autoplay="1" controls width=99%/>
+      <source type="video/mp4" src="{}">
+    </video>
+    <BR>
+    """.format(s.embed_video(figname)),
+notes="""
+
+* random block first half 75% to the right, then symetric
+
+""")
 
 # open questions:
 #figpath = '../2017-03-06_cours-NeuroComp_intro/figures'
@@ -206,52 +267,16 @@ notes="""
 on the video, they characterize a complex cell from area V1 by manipulating the visual stimulation's parameters: central position, orientation of a bar, direction, ...
 * -> As a consequence,  Neurons are often characterized using simple stimuli like bars or grating
 """)
-import os
-import numpy as np
-def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequence.mp4'):
-    import gizeh as gz
-    import moviepy.editor as mpy
-
-    r = W*radius
-    duration = T * len(seq)
-    # print(seq)
-    duration_flash = .05
-    s = dict(lx=r, ly=r)
-
-    def make_frame(t):
-        i = int(t/T)
-        dir = seq[i]
-        t_ = t - i*T
-        # print(i, dir, t_)
-
-        surface = gz.Surface(W, H, bg_color=(0, 0, 0))
-        flash = gz.rectangle(xy=(W/2., H/2.), fill=(0,1,0), **s)
-
-        if t_ < duration_flash:
-            flash.draw(surface)
-
-        else:
-            x = W/2. * (1 - dir*t_)
-            rect = gz.rectangle(xy=(x, H/2.), fill=(1, 0, 0), **s)
-            rect.draw(surface)
-
-        # print (surface.get_npimage().shape)
-        return surface.get_npimage()
-
-    clip = mpy.VideoClip(make_frame, duration=duration)
-    clip.write_videofile(figname, fps=fps)
-    return 'ok'
 
 s.close_section()
 
-N_seq = 60
 figname='alternation.mp4'
 seq = [-1, 1] * (N_seq//2)
 figname = os.path.join(figpath_talk, figname)
 if not os.path.isfile(figname): create_movie(seq, figname=figname)
 
 s.add_slide(content="""
-    <video controls width=99%/>
+    <video loop="1" autoplay="1" controls width=99%/>
       <source type="video/mp4" src="{}">
     </video>
     <BR>
@@ -274,7 +299,7 @@ if not os.path.isfile(figname): create_movie(seq, figname=figname)
 
 
 s.add_slide(content="""
-    <video controls width=99%/>
+    <video loop="1" autoplay="1" controls width=99%/>
       <source type="video/mp4" src="{}">
     </video>
     <BR>
@@ -292,7 +317,7 @@ figname = os.path.join(figpath_talk, figname)
 if not os.path.isfile(figname): create_movie(seq, figname=figname)
 
 s.add_slide(content="""
-    <video controls width=99%/>
+    <video loop="1" autoplay="1" controls width=99%/>
       <source type="video/mp4" src="{}">
     </video>
     <BR>
@@ -366,7 +391,7 @@ if not os.path.isfile(figname): create_movie(seq, figname=figname)
 
 
 s.add_slide(content="""
-    <video controls width=99%/>
+    <video loop="1" autoplay="1" controls width=99%/>
       <source type="video/mp4" src="{}">
     </video>
     <BR>

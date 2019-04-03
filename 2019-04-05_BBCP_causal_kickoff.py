@@ -214,7 +214,7 @@ def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequenc
 
         text = gz.text(f"{i+1:02d}/{len(seq):02d}", fontfamily="Impact",  fontsize=W/25,
                             h_align="left", v_align="top",
-                          fill=(1,1,1), xy=(W/20, H/20), angle=0)
+                          fill=(1,1,1), xy=(W/20, H/10), angle=0)
         text.draw(surface)
         # print (surface.get_npimage().shape)
         return surface.get_npimage()

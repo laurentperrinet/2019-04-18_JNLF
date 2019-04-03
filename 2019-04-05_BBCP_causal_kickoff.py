@@ -97,6 +97,7 @@ s.meta['Acknowledgements'] =f"""
 </ul>
 <BR>
 {Rick}{Karl}{JB}{LM}{Anna}{Fredo}<a href="https://github.com/laurentperrinet/slides.py">{Python}</a>
+<BR>
     This work was supported by ANR project ANR-18-AAPG–“CAUSAL, Cognitive Architectures of  Causal Learning”.
 </small>
 

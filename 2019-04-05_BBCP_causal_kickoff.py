@@ -224,26 +224,6 @@ def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequenc
     return 'ok'
 
 
-figname='randomblock.mp4'
-seq = -1 + 2 * (np.random.rand(N_seq)<.75)
-seq[N_seq//2:] = -1 + 2 * (np.random.rand(N_seq//2)>.75)
-# print(seq)
-figname = os.path.join(figpath_talk, figname)
-if not os.path.isfile(figname): create_movie(seq, figname=figname)
-
-
-s.add_slide(content="""
-    <video loop="1" autoplay="1" controls width=99%/>
-      <source type="video/mp4" src="{}">
-    </video>
-    <BR>
-    """.format(s.embed_video(figname)),
-notes="""
-
-* random block first half 75% to the right, then symetric
-
-""")
-
 # open questions:
 #figpath = '../2017-03-06_cours-NeuroComp_intro/figures'
 bib =  '(see this <a href=" http://viperlib.york.ac.uk/areas/15-anatomy-physiology/contributions/2032-hubel-and-wiesel">viperlib</a> page)'

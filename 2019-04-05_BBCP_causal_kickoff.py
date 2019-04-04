@@ -222,35 +222,35 @@ def create_movie(seq, T=.5, radius=1/64, fps=50, W=1000, H=600, figname='sequenc
     clip = mpy.VideoClip(make_frame, duration=duration)
     clip.write_videofile(figname, fps=fps)
     return 'ok'
-
-
-# open questions:
-#figpath = '../2017-03-06_cours-NeuroComp_intro/figures'
-bib =  '(see this <a href=" http://viperlib.york.ac.uk/areas/15-anatomy-physiology/contributions/2032-hubel-and-wiesel">viperlib</a> page)'
-
-for fname in ['scientists.jpg']:
-    s.add_slide(content=s.content_figures(
-       [os.path.join(figpath_talk, fname)], cell_bgcolor=meta['bgcolor'],
-       title=meta['sections'][i_section], height=s.meta['height']*height_ratio) + bib,
-        notes="""
-
-* (INTRO) Indeed, a conundrum in visual neuroscience, and neuroscience in general, is to infer the causes that underly the firing of any given neural cell...
-
-* to illustrate this methodology, I love to see this picture of David Hubel and Torsten Wiesel performing their Nobel Prize-winning experiments on area V1.  ( source: http://viperlib.york.ac.uk/areas/15-anatomy-physiology/contributions/2032-hubel-and-wiesel ) -
-""")
-
-s.add_slide(content="""
-    <video controls width=99%/>
-      <source type="video/mp4" src="{}">
-    </video>
-    <BR>
-    """.format(s.embed_video(os.path.join(figpath_talk, 'ComplexDirSelCortCell250_title.mp4'))) + bib,
-notes="""
-on the video, they characterize a complex cell from area V1 by manipulating the visual stimulation's parameters: central position, orientation of a bar, direction, ...
-* -> As a consequence,  Neurons are often characterized using simple stimuli like bars or grating
-""")
-
-s.close_section()
+#
+#
+# # open questions:
+# #figpath = '../2017-03-06_cours-NeuroComp_intro/figures'
+# bib =  '(see this <a href=" http://viperlib.york.ac.uk/areas/15-anatomy-physiology/contributions/2032-hubel-and-wiesel">viperlib</a> page)'
+#
+# for fname in ['scientists.jpg']:
+#     s.add_slide(content=s.content_figures(
+#        [os.path.join(figpath_talk, fname)], cell_bgcolor=meta['bgcolor'],
+#        title=meta['sections'][i_section], height=s.meta['height']*height_ratio) + bib,
+#         notes="""
+#
+# * (INTRO) Indeed, a conundrum in visual neuroscience, and neuroscience in general, is to infer the causes that underly the firing of any given neural cell...
+#
+# * to illustrate this methodology, I love to see this picture of David Hubel and Torsten Wiesel performing their Nobel Prize-winning experiments on area V1.  ( source: http://viperlib.york.ac.uk/areas/15-anatomy-physiology/contributions/2032-hubel-and-wiesel ) -
+# """)
+#
+# s.add_slide(content="""
+#     <video controls width=99%/>
+#       <source type="video/mp4" src="{}">
+#     </video>
+#     <BR>
+#     """.format(s.embed_video(os.path.join(figpath_talk, 'ComplexDirSelCortCell250_title.mp4'))) + bib,
+# notes="""
+# on the video, they characterize a complex cell from area V1 by manipulating the visual stimulation's parameters: central position, orientation of a bar, direction, ...
+# * -> As a consequence,  Neurons are often characterized using simple stimuli like bars or grating
+# """)
+#
+# s.close_section()
 
 figname='alternation.mp4'
 seq = [-1, 1] * (N_seq//2)
@@ -262,7 +262,7 @@ s.add_slide(content="""
       <source type="video/mp4" src="{}">
     </video>
     <BR>
-    """.format(s.embed_video(figname)) + bib,
+    """.format(s.embed_video(figname)),
 notes="""
 
 * typically tested with a regular sequence
@@ -285,7 +285,7 @@ s.add_slide(content="""
       <source type="video/mp4" src="{}">
     </video>
     <BR>
-    """.format(s.embed_video(figname)) + bib,
+    """.format(s.embed_video(figname)),
 notes="""
 
 * block 50%
@@ -303,7 +303,7 @@ s.add_slide(content="""
       <source type="video/mp4" src="{}">
     </video>
     <BR>
-    """.format(s.embed_video(figname)) + bib,
+    """.format(s.embed_video(figname)),
 notes="""
 
 * block 75% to the right
@@ -377,7 +377,7 @@ s.add_slide(content="""
       <source type="video/mp4" src="{}">
     </video>
     <BR>
-    """.format(s.embed_video(figname)) + bib,
+    """.format(s.embed_video(figname)),
 notes="""
 
 * random block first half 75% to the right, then symetric

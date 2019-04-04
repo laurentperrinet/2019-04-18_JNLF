@@ -356,7 +356,6 @@ for txt in ['1', '2']:
 # ""","""
 #
 # Here, we
-#
 # """]):
 #     for txt in [str(i) for i in range(4)[::-1]]:
 #         s.add_slide(content=s.content_figures(

@@ -3,6 +3,8 @@ __licence__ = 'GPL licence'
 DEBUG = True
 DEBUG = False
 
+fig_width = 12
+
 import os
 home = os.environ['HOME']
 figpath_talk = 'figures'
@@ -804,6 +806,7 @@ notes="""
 # """)
 
 for mode, mode_txt in zip(['expectation', 'fixed'], [' - Full model', ' - Fixed window', ]):
+    import bayesianchangepoint as bcp
     for i_block in range(3):
         figname = os.path.join(figpath_talk, 'bayesianchangepoint_exp_' + mode + '_' + str(i_block) + '.png')
         if not os.path.isfile(figname):
@@ -942,7 +945,8 @@ notes="""
 
 """)
 
-for mode, mode_txt in zip(['expectation', 'fixed', ], [' - Full model', ' - With hindsight', ]):
+for mode, mode_txt in zip(['expectation', 'hindsight', ], [' - Full model', ' - With hindsight', ]):
+    import bayesianchangepoint as bcp
 
     figname = os.path.join(figpath_talk, 'bayesianchangepoint_' + mode + '.png')
     if not os.path.isfile(figname):

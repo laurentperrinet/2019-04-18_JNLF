@@ -533,8 +533,7 @@ However, while this results seem encouraging, a more finer analysis may be neces
 
 """)
 
-
-# >>> Lup IS HERE <<<
+s.close_section()
 
 i_section += 1
 ###############################################################################
@@ -919,6 +918,7 @@ i_section += 1
 ###############################################################################
 ###############################################################################
 
+
 s.open_section()
 title = meta['sections'][i_section]
 s.add_slide_outline(i_section,
@@ -926,6 +926,34 @@ notes="""
 
 
 """)
+
+for mode, mode_txt in zip(['expectation', 'fixed', ], [' - Full model', ' - With hindsight', ]):
+
+    figname = os.path.join(figpath_talk, 'bayesianchangepoint_' + mode + '.png')
+    if not os.path.isfile(figname):
+        print('Doing ', figname)
+        T = 400
+        p_gen = .25 * np.ones(T)
+        p_gen[100:300] = .75
+        np.random.seed(2018)
+        o = 1 * (p_gen > np.random.rand(T))
+
+        p_bar, r_bar, beliefs = bcp.inference(o, h=1/200, p0=.5)
+        # fig, axs = bcp.plot_inference(o, p_gen, p_bar, r_bar, beliefs, max_run_length=250, fixed_window_size=200, mode=mode, fig_width=fig_width)
+
+        if mode == 'fixed':
+            fig, axs = bcp.plot_inference(o, p_gen, p_bar, r_bar, beliefs, max_run_length=250, fixed_window_size=40, mode=mode, fig_width=fig_width)
+        else:
+            fig, axs = bcp.plot_inference(o, p_gen, p_bar, r_bar, beliefs, max_run_length=250, mode=mode, fig_width=fig_width)
+        fig.savefig(figname, dpi=400)
+
+    s.add_slide(content=s.content_figures([figname],
+                title=title + mode_txt, height=s.meta['height']*.825) + url,
+       notes="""
+Let's now see a further  application of our model to a simple synthetic example but with a new mode that may be applied to RL
+
+""")
+
 
 #
 #     for txt in ['fixed', 'hindsight']:

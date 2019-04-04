@@ -142,9 +142,9 @@ intro += """
 # http://pne.people.si.umich.edu/PDF/howtotalk.pdf
 #
 #  """)
-
-s.add_slide(content=s.content_figures([figname_qr], cell_bgcolor=meta['bgcolor'], height=s.meta['height']*height_ratio) + '<BR><a href="{url}"> {url} </a>'.format(url=meta['url']),
-            notes="All the material is available online - please flash this QRcode this leads to a page with links to further references and code ")
+#
+# s.add_slide(content=s.content_figures([figname_qr], cell_bgcolor=meta['bgcolor'], height=s.meta['height']*height_ratio) + '<BR><a href="{url}"> {url} </a>'.format(url=meta['url']),
+#             notes="All the material is available online - please flash this QRcode this leads to a page with links to further references and code ")
 
 ###############################################################################
 ###############################################################################

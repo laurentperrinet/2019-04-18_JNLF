@@ -57,6 +57,7 @@ meta = dict(
  time_end = '16:30:00',
  url=f'https://laurentperrinet.github.io/talk/{slugify(tag)}',
  sections=['Should I stay or should I go?',
+          'Experimental protocol',
           'The Bayesian Changepoint Detector',
           'Results using the BCP',
           'Application to RL?',
@@ -402,20 +403,22 @@ We anticipated that such an  experiment for which we simply recordedd the eye mo
 
 """)
 
-s.add_slide(content=s.content_figures(
-[os.path.join(figpath_talk, 'protocol_bet.png')],
-        title=title + ' - Random-length block design', height=s.meta['height']*.825),
+s.close_section()
+
+i_section += 1
+###############################################################################
+# 🏄🏄🏄🏄🏄🏄🏄🏄            The Experimental protocol             🏄🏄🏄🏄🏄🏄🏄🏄
+###############################################################################
+###############################################################################
+
+s.open_section()
+title = meta['sections'][i_section]
+s.add_slide_outline(i_section,
 notes="""
+Indeed, these raw psycholophysical results are encouraging but since we used a generative model for generating the sequence, let's see if we can build a Bayesian model which would be optimal wrt to this generative model.
 
-This is why we added a supplementary experiment for each observer but on a different day for which we asked at every trial to give a subjective, conscious evaluation of the direction of the next trial + a confidence about this inference. Once this information given by the subject, we were showing the actual outcome.
-
-Interestingly, we used exactly the same sequence, allowing to make a direc comparison of the results of both experiments
-
-We called this experiment the bet experiment.
-
-
+Indeed, such a model already exists, the onlin BCP, and we will adapt it for our specific setting.
 """)
-
 
 
 url =  'full code @ <a href="https://github.com/chloepasturel/AnticipatorySPEM">github.com/chloepasturel/AnticipatorySPEM</a>'
@@ -437,6 +440,20 @@ Let's now have a look at the raw psychophysical results..
 
 """)
 
+
+s.add_slide(content=s.content_figures(
+[os.path.join(figpath_talk, 'protocol_bet.png')],
+        title=title + ' - Random-length block design', height=s.meta['height']*.825),
+notes="""
+
+This is why we added a supplementary experiment for each observer but on a different day for which we asked at every trial to give a subjective, conscious evaluation of the direction of the next trial + a confidence about this inference. Once this information given by the subject, we were showing the actual outcome.
+
+Interestingly, we used exactly the same sequence, allowing to make a direc comparison of the results of both experiments
+
+We called this experiment the bet experiment.
+
+
+""")
 
 s.add_slide(content=s.content_figures(
 [os.path.join(figpath_talk, 'Experiment_randomblock_bet.png')],

@@ -180,6 +180,8 @@ https://laurentperrinet.github.io/talk/2018-02-01-bcp-invibe-fest/
 https://laurentperrinet.github.io/talk/2018-04-05-bcp-talk/
 https://laurentperrinet.github.io/talk/2019-01-18-laconeu/
 
+this talk= https://laurentperrinet.github.io/talk/2019-04-05-bbcp-causal-kickoff/
+
 * (SHOW TITLE)
 
 """)

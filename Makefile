@@ -1,6 +1,6 @@
 default: github
 
-SRC=2019-04-05_BBCP_causal_kickoff
+SRC=2019-04-18_JNLF
 
 edit:
 	atom $(SRC).py

@@ -174,10 +174,11 @@ la Timone in Marseille, a joint unit from the CNRS and the AMU
 
 """)
 
+bib = s.content_bib("Akiyoshi KITAOKA", "2010", 'wwww', url="http://www.ritsumei.ac.jp/~akitaoka/index-e.html")
 
 s.add_slide(content=s.content_figures(
 ['https://www.illusionsindex.org/images/illusions/Rotating-Snakes/42_rotsnakes_main.jpg'],
-        title=' Rotating snakes ', height=s.meta['height']*.825),
+        title=' Rotating snakes ', height=s.meta['height']*.825) + bib,
 notes="""
 https://www.illusionsindex.org/i/rotating-snakes
 
@@ -206,6 +207,35 @@ http://i2.cdn.cnn.com/cnnnext/dam/assets/150410134301-cat-going-up-or-down-super
 
 """)
 
+
+s.add_slide(content=s.content_figures(
+    [os.path.join(figpath_talk, 'The_Dress_(viral_phenomenon).png')],
+        title=None, height=s.meta['height']*.825) + url,
+notes="""
+
+https://en.wikipedia.org/wiki/The_dress
+
+The dress is a photograph that became a viral internet sensation on 26 February 2015, when viewers disagreed over whether the dress pictured was coloured blue and black, or white and gold. The phenomenon revealed differences in human colour perception, which have been the subject of ongoing scientific investigations into neuroscience and vision science, with a number of papers published in peer-reviewed science journals.
+
+The photo originated from a washed-out colour photograph of a dress posted on the social networking service Tumblr. Within the first week after the surfacing of the image, more than 10 million tweets mentioned the dress, using hashtags such as #thedress, #whiteandgold, and #blackandblue. Although the actual colour was eventually confirmed as blue and black,[3][4] the image prompted many discussions, with users debating their opinions on the colour and how they perceived the dress in the photograph as a certain colour. Members of the scientific community began to investigate the photo for fresh insights into human color vision.
+
+The dress itself, which was identified as a product of the retailer Roman Originals, experienced a major surge in sales as a result of the incident. The retailer also produced a one-off version of the dress in white and gold as a charity campaign.
+""")
+
+
+bib = s.content_bib("Cydonia Mensae", "1976", 'Viking Orbiter image', url="Viking Orbiter image")
+for fname in ['Face-on-mars.jpg', 'Viking_moc_face_20m.gif']:
+    s.add_slide(content=s.content_figures(
+        [os.path.join(figpath_talk, fname)],
+            title="Paréidolie", height=s.meta['height']*.825) + url,
+    notes="""
+    Cydonia was first imaged in detail by the Viking 1 and Viking 2 orbiters. Eighteen images of the Cydonia region were taken by the orbiters, of which seven have resolutions better than 250 m/pixel (820 ft/pixel). The other eleven images have resolutions that are worse than 550 m/pixel (1800 ft/pixel) and are of limited use for studying surface features. Of the seven good images, the lighting and time at which two pairs of images were taken are so close as to reduce the number to five distinct images. The Mission to Mars: Viking Orbiter Images of Mars CD-ROM set image numbers for these are: 035A72 (VO-1010), 070A13 (VO-1011), 561A25 (VO-1021), 673B54 & 673B56 (VO-1063), and 753A33 & 753A34 (VO-1028).[11][12]
+
+    In one of the images taken by Viking 1 on July 25, 1976, a two-kilometre-long (1.2 mi) Cydonian mesa, situated at 40.75° north latitude and 9.46° west longitude,[13] had the appearance of a humanoid face. When the image was originally acquired, Viking chief scientist Gerry Soffen dismissed the "Face on Mars" in image 035A72[14] as a "trick of light and shadow".[15][16] However, a second image, 070A13, also shows the "face", and was acquired 35 Viking orbits later at a different sun-angle from the 035A72 image. This latter discovery was made independently by Vincent DiPietro and Gregory Molenaar, two computer engineers at NASA's Goddard Space Flight Center. DiPietro and Molenaar discovered the two misfiled images, Viking frames 035A72 and 070A13, while searching through NASA archives.[17]
+    2.1 Later imagery
+
+    More than 20 years after the Viking 1 images were taken, a succession of spacecraft visited Mars and made new observations of the Cydonia region. These spacecraft have included NASA's Mars Global Surveyor (1997–2006) and Mars Reconnaissance Orbiter (2006–),[18] and the European Space Agency's Mars Express probe (2003–).[19] In contrast to the relatively low resolution of the Viking images of Cydonia, these new platforms afford much improved resolution. For instance, the Mars Express images are at a resolution of 14 m/pixel (46 ft/pixel) or better. By combining data from the High Resolution Stereo Camera (HRSC) on the Mars Express probe and the Mars Orbiter Camera (MOC) on board NASA's Mars Global Surveyor it has been possible to create a three-dimensional representation of the "Face on Mars".[20]
+    """)
 s.close_section()
 
 i_section += 1

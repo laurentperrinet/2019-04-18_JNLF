@@ -1,6 +1,6 @@
 # Des illusions aux hallucinations visuelles: une porte sur la perception
 
-* What:: talk @ [conference](conference_url)
+* What:: talk @ [JNLF 2019](https://www.jnlf.fr/agenda/jnlf-lille-2019)
 * Who:: Perrinet, Laurent U
 * Where: Lille (France), see https://laurentperrinet.github.io/talk/2019-04-18-jnlf
 * When: 18/04/2019, time: 15:45:00-16:30:00

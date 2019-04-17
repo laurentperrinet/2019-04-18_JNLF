@@ -176,8 +176,8 @@ la Timone in Marseille, a joint unit from the CNRS and the AMU
 """)
 
 url =  '<a href https://en.wikipedia.org/wiki/Hering_illusion">Hering illusion</a>'
-s.add_slide(content=s.content_figures(
-[path2('Hering_illusion.svg')],
+for suff in ['', '_without']:
+    s.add_slide(content=s.content_figures([path2('Hering_illusion' + suff + '.svg')],
         title=None, #'Classical visual illusions',
         height=s.meta['height']*height_ratio) + url,
 notes="""

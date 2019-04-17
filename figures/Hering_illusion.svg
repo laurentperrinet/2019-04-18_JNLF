@@ -46,9 +46,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.4609375"
-     inkscape:cx="-66.525661"
-     inkscape:cy="341"
+     inkscape:zoom="1.1259436"
+     inkscape:cx="334.83026"
+     inkscape:cy="250"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -343,14 +343,4 @@
          points="40,-256 40,256" />
     </g>
   </g>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="356.06778"
-     y="229.28815"
-     id="text4541"><tspan
-       sodipodi:role="line"
-       id="tspan4543"
-       x="356.06778"
-       y="229.28815">https://en.wikipedia.org/wiki/Hering_illusion</tspan></text>
 </svg>

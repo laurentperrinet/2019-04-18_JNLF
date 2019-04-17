@@ -193,7 +193,7 @@ s.add_slide(content=s.content_figures(
 [path2('42_rotsnakes_main.jpg')],
 #['https://www.illusionsindex.org/images/illusions/Rotating-Snakes/42_rotsnakes_main.jpg'],
         title=None, #'Rotating snakes',
-        height=s.meta['height']*.85) + url,
+        height=s.meta['height']*.8) + url,
 notes="""
 https://www.illusionsindex.org/i/rotating-snakes
 

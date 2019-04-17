@@ -101,7 +101,7 @@ s.meta['Acknowledgements'] =f"""
 <h5>Acknowledgements:</h5>
 <ul>
     <li>Rick Adams and Karl Friston @ UCL - Wellcome Trust Centre for Neuroimaging</li>
-    <li>Jean-Bernard Damasse, Laurent Madelain and Anna Montagnini  - ANR REM</li>
+    <li>Anna Montagnini  - INT</li>
     <li>Frédéric Chavane - INT</li>
 </ul>
 <BR>

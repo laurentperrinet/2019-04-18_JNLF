@@ -185,7 +185,7 @@ notes="""
 
 """)
 
-url =  '<a href http://www.ritsumei.ac.jp/~akitaoka/index-e.html">Akiyoshi KITAOKA</a>'
+url =  'Rotating Snakes - <a href http://www.ritsumei.ac.jp/~akitaoka/index-e.html">Akiyoshi KITAOKA</a>'
 
 s.add_slide(content=s.content_figures(
 [path2('42_rotsnakes_main.jpg')],

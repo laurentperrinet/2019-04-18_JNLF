@@ -280,7 +280,7 @@ Indeed, such a model already exists, the onlin BCP, and we will adapt it for our
 
 url =  'full code @ <a href="https://github.com/chloepasturel/AnticipatorySPEM">github.com/chloepasturel/AnticipatorySPEM</a>'
 
-s.add_slide(content=s.content_figures(
+s.hide_slide(content=s.content_figures(
    [path2('scheme_thorpe.jpg')], bgcolor="black",
    height=s.meta['height']*height_ratio),
 notes="""
@@ -293,7 +293,7 @@ notes="""
  """)
 
 
-s.add_slide(content=s.content_figures(
+s.hide_slide(content=s.content_figures(
     [path2('tsonga.png')], bgcolor="black",
     height=s.meta['height']*height_ratio),
     notes="""

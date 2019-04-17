@@ -121,33 +121,38 @@ intro = """
 <h2 class="title">{title}</h2>
 <h3>{author_link}</h3>
 """.format(**meta)
-intro += s.content_imagelet(os.path.join(figpath_slides, "troislogos.png"), s.meta['height']*.2) #bgcolor="black",
+
+# intro += s.content_imagelet(os.path.join(figpath_slides, "troislogos.png"), s.meta['height']*.2)
+intro += s.content_figures(
+    [path2('troislogos.png')], bgcolor=meta['bgcolor'],
+    height=s.meta['height']*.2)
+#bgcolor="black",
 intro += """
 <h4><a href="{conference_url}">{conference}</a>, {DD}/{MM}/{YYYY} </h4>
 
 {Acknowledgements}
 """.format(**meta)
 ###########################################################################
-s.add_slide(content=intro)
-
-s.add_slide(content=s.content_figures(
-    #[path2('qr.png')], bgcolor="black",
-    [os.path.join(figpath_slides, 'mire.png')], bgcolor=meta['bgcolor'],
-    height=s.meta['height']*1.),
-    #image_fname=os.path.join(figpath_aSPEM, 'mire.png'),
-    notes="""
-Check-list:
------------
-
-* (before) bring VGA adaptors, AC plug, remote, pointer
-* (avoid distractions) turn off airport, screen-saver, mobile, sound, ... other running applications...
-* (VP) open monitor preferences / calibrate / title page
-* (timer) start up timer
-* (look) @ audience
-
-http://pne.people.si.umich.edu/PDF/howtotalk.pdf
-
- """)
+# s.add_slide(content=intro)
+#
+# s.add_slide(content=s.content_figures(
+#     #[path2('qr.png')], bgcolor="black",
+#     [os.path.join(figpath_slides, 'mire.png')], bgcolor=meta['bgcolor'],
+#     height=s.meta['height']*1.),
+#     #image_fname=os.path.join(figpath_aSPEM, 'mire.png'),
+#     notes="""
+# Check-list:
+# -----------
+#
+# * (before) bring VGA adaptors, AC plug, remote, pointer
+# * (avoid distractions) turn off airport, screen-saver, mobile, sound, ... other running applications...
+# * (VP) open monitor preferences / calibrate / title page
+# * (timer) start up timer
+# * (look) @ audience
+#
+# http://pne.people.si.umich.edu/PDF/howtotalk.pdf
+#
+#  """)
 #
 # s.add_slide(content=s.content_figures([figname_qr], cell_bgcolor=meta['bgcolor'], height=s.meta['height']*height_ratio) + '<BR><a href="{url}"> {url} </a>'.format(url=meta['url']),
 #             notes="All the material is available online - please flash this QRcode this leads to a page with links to further references and code ")
@@ -302,7 +307,7 @@ s.add_slide(content=s.content_figures(
 s.add_slide(content=s.content_figures(
     [path2('figure-tsonga.png')], bgcolor="black",
     height=s.meta['height']*height_ratio),
-    #image_fname=os.path.join(figpath, 'figure-tsonga.png'), embed=False,
+    #image_fname=os.path.join(figpath, 'figure-tsonga.png'), embed=s.meta['embed'],
         notes="""
 
  * and at this instant, the sensed physical position is lagging behind (as represented here by $\tau_s \cdot v 1~m$ ), that is, approximately at $45$ degrees of eccentricity (red dotted line),
@@ -346,7 +351,7 @@ As a matter of fact, the motion extrapolation hypothesis was challenged because 
 
 
 s.add_slide(content=s.content_figures(
-    [path2('FLE_histogram.png')], title=title, embed=False,
+    [path2('FLE_histogram.png')], title=title, embed=s.meta['embed'],
     height=s.meta['height']*height_ratio) + fle_bib,
    notes="""
 
@@ -407,7 +412,7 @@ notes="""
 
 for no in ['2a', '2b', '3', '7']:
     s.add_slide(content=s.content_figures(
-    [path2('Bressloff2002Fig' + no + '.png')], title=title, embed=False,
+    [path2('Bressloff2002Fig' + no + '.png')], title=title, embed=s.meta['embed'],
     height=s.meta['height']*height_ratio) + bib,
    notes="""
 
@@ -464,7 +469,7 @@ Line motion illusion.
 
 
 s.add_slide(content=s.content_figures(
-    [path2('Jancke_etal2004.png')], title=title, embed=False,
+    [path2('Jancke_etal2004.png')], title=title, embed=s.meta['embed'],
     height=s.meta['height']*height_ratio) + bib,
    notes="""
 
@@ -512,7 +517,7 @@ notes="""
 """)
 
 s.add_slide(content=s.content_figures(
-    [path2('Chemla_etal2019.png')], title=title, embed=False,
+    [path2('Chemla_etal2019.png')], title=title, embed=s.meta['embed'],
     height=s.meta['height']*height_ratio) + bib,
    notes="""
 

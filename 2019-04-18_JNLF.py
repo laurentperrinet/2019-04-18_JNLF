@@ -31,7 +31,7 @@ DD = int(tag[8:10])
 from slides import Slides
 
 height_px = 80
-height_ratio = .7
+height_ratio = .8 # use to make the figures fit on the screen
 
 meta = dict(
  embed=False,
@@ -91,10 +91,11 @@ figpath_people = os.path.join(home, 'ownCNRS/2019-01_LACONEU/people')
 Karl = s.content_imagelet(os.path.join(figpath_people, 'karl.jpg'), height_px)
 Rick = s.content_imagelet(os.path.join(figpath_people, 'rick.jpg'), height_px)
 Anna = s.content_imagelet(os.path.join(figpath_people, 'anna.jpg'), height_px)
-LM = s.content_imagelet(os.path.join(figpath_people, 'LM.png'), height_px)
-JB = s.content_imagelet(os.path.join(figpath_people, 'JB.jpg'), height_px)
+# LM = s.content_imagelet(os.path.join(figpath_people, 'LM.png'), height_px)
+# JB = s.content_imagelet(os.path.join(figpath_people, 'JB.jpg'), height_px)
 Fredo = s.content_imagelet(os.path.join(figpath_people, 'fredo.png'), height_px)
-Python = s.content_imagelet('https://www.python.org/static/community_logos/python-powered-h-140x182.png', height_px)
+# Python = s.content_imagelet('https://www.python.org/static/community_logos/python-powered-h-140x182.png', height_px)
+# <a href="https://github.com/laurentperrinet/slides.py">{Python}</a>
 s.meta['Acknowledgements'] =f"""
 <small>
 <h5>Acknowledgements:</h5>
@@ -104,7 +105,7 @@ s.meta['Acknowledgements'] =f"""
     <li>Frédéric Chavane - INT</li>
 </ul>
 <BR>
-{Rick}{Karl}{JB}{LM}{Anna}{Fredo}<a href="https://github.com/laurentperrinet/slides.py">{Python}</a>
+{Rick}{Karl}{Anna}{Fredo}
 <BR>
     This work was supported by ANR project "Horizontal-V1" N° ANR-17-CE37-0006.
 </small>
@@ -181,7 +182,7 @@ url =  '<a href https://en.wikipedia.org/wiki/Hering_illusion">Hering illusion</
 s.add_slide(content=s.content_figures(
 [path2('Hering_illusion.svg')],
         title=None, #'Classical visual illusions',
-        height=s.meta['height']*.9) + url,
+        height=s.meta['height']*height_ratio) + url,
 notes="""
 
 
@@ -193,7 +194,7 @@ s.add_slide(content=s.content_figures(
 [path2('42_rotsnakes_main.jpg')],
 #['https://www.illusionsindex.org/images/illusions/Rotating-Snakes/42_rotsnakes_main.jpg'],
         title=None, #'Rotating snakes',
-        height=s.meta['height']*.8) + url,
+        height=s.meta['height']*height_ratio) + url,
 notes="""
 https://www.illusionsindex.org/i/rotating-snakes
 
@@ -229,7 +230,7 @@ s.add_slide(content=s.content_figures(
     path2('The_Dress_(viral_phenomenon).png'),
     path2('Wikipe-tan_wearing_The_Dress.svg'),
     ], fragment=True,
-        title=None, height=s.meta['height']*.825) + url,
+        title=None, height=s.meta['height']*height_ratio) + url,
 notes="""
 
 https://en.wikipedia.org/wiki/The_dress
@@ -280,7 +281,7 @@ url =  'full code @ <a href="https://github.com/chloepasturel/AnticipatorySPEM">
 
 s.add_slide(content=s.content_figures(
    [path2('scheme_thorpe.jpg')], bgcolor="black",
-   height=s.meta['height']*.90),
+   height=s.meta['height']*height_ratio),
 notes="""
 
  * today, I would like  to focus on a particular problem which will help us unravel the dynamics of decision making: oculomotor delays.
@@ -293,7 +294,7 @@ notes="""
 
 s.add_slide(content=s.content_figures(
     [path2('tsonga.png')], bgcolor="black",
-    height=s.meta['height']*.90),
+    height=s.meta['height']*height_ratio),
     notes="""
  * let's move to a human, in particular a tennis player ---here (highly trained) Jo-Wilfried Tsonga at Wimbledon---...
 
@@ -303,7 +304,7 @@ s.add_slide(content=s.content_figures(
 
 s.add_slide(content=s.content_figures(
     [path2('figure-tsonga.png')], bgcolor="black",
-    height=s.meta['height']*.90),
+    height=s.meta['height']*height_ratio),
     #image_fname=os.path.join(figpath, 'figure-tsonga.png'), embed=False,
         notes="""
 
@@ -349,7 +350,7 @@ As a matter of fact, the motion extrapolation hypothesis was challenged because 
 
 s.add_slide(content=s.content_figures(
     [path2('FLE_histogram.png')], title=title, embed=False,
-    height=s.meta['height']*.8) + fle_bib,
+    height=s.meta['height']*height_ratio) + fle_bib,
    notes="""
 
 * For that, we replot the movies I have just shown by showing for the dot the Histogram of the estimated positions as a function of time for the source layer (Left) and the target layer (right). The left-hand column illustrates the predictive model before delay compensation. The right-hand column illustrates the motion extrapolation model with delay compensation. Histograms of the inferred horizontal positions (blueish bottom panel) and  horizontal speed (redish top panel) are shown in columns  as a function  of time. A darker level corresponds to a higher probability, while a light  color corresponds to an unlikely estimation. In particular, we focus on three  particular epochs along the trajectory, corresponding to the standard, flash  initiated and terminated cycles. The timing of these epochs flashes are indicated by  dashed vertical lines. In dark, the physical time and in green the delayed  input knowing $\tau=100~ms$.
@@ -454,7 +455,7 @@ notes="""
 
 s.add_slide(content=s.content_figures(
     [path2('Jancke_etal2004.png')], title=title, embed=False,
-    height=s.meta['height']*.8) + bib,
+    height=s.meta['height']*height_ratio) + bib,
    notes="""
 
 """)
@@ -498,7 +499,7 @@ notes="""
 
 s.add_slide(content=s.content_figures(
     [path2('Chemla_etal2019.png')], title=title, embed=False,
-    height=s.meta['height']*.8) + bib,
+    height=s.meta['height']*height_ratio) + bib,
    notes="""
 
 In a recent study [@Chemla19], we used VSDI to record the activity of the primary visual cortex (V1) of awake macaque monkeys. Is there any difference between the response to the single dot and that to the two dots? Indeed, VSD recordings allow to record the activity of populations of V1 neurons which are approximately at the scale of a cortical column. Additionally, the recorded response is rapid enough to capture the dynamics of the lrAM stimulus. Recordings show that as the evoked activity of the second stimulus reaches V1, a cortical suppressive wave propagates toward the retinotopic wave evoked by the first dot. This was put in evidence by statistically comparing the response of the brain to the response of the two dots in isolation. In particular, we found that thanks to this suppressive wave, the activity for the brain stimulus was more precise, suggesting that such suppressive wave could serve as predictive processing step to be read-out in upstream cortical areas.

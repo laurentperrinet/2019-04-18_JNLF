@@ -190,7 +190,8 @@ notes="""
 url =  '<a href http://www.ritsumei.ac.jp/~akitaoka/index-e.html">Akiyoshi KITAOKA</a>'
 
 s.add_slide(content=s.content_figures(
-['https://www.illusionsindex.org/images/illusions/Rotating-Snakes/42_rotsnakes_main.jpg'],
+[path2('42_rotsnakes_main.jpg')],
+#['https://www.illusionsindex.org/images/illusions/Rotating-Snakes/42_rotsnakes_main.jpg'],
         title=None, #'Rotating snakes',
         height=s.meta['height']*.85) + url,
 notes="""

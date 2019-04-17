@@ -349,7 +349,7 @@ As a matter of fact, the motion extrapolation hypothesis was challenged because 
 """)
 
 
-s.add_slide(content=s.content_figures(
+s.hide_slide(content=s.content_figures(
     [path2('FLE_histogram.png')], title=title, embed=s.meta['embed'],
     height=s.meta['height']*height_ratio) + fle_bib,
    notes="""
@@ -363,6 +363,16 @@ s.add_slide(content=s.content_figures(
 """)
 
 
+
+bib = s.content_bib("Changizi et al", "2008", 'Cognitive Science', url="https://doi.org/10.1080/03640210802035191")
+for suff in ['']:
+    s.add_slide(content=s.content_figures([path2('Hering_illusion' + suff + '.svg')],
+        title=None, #'Classical visual illusions',
+        height=s.meta['height']*height_ratio) + bib,
+notes="""
+
+
+""")
 
 freemove_bib = ''
 freemove_bib += s.content_bib("Friston , Adams, LP and Breakspear", "2012", 'Frontiers in Psychology', url="https://laurentperrinet.github.io/publication/friston-12/")

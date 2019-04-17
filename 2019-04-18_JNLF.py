@@ -116,7 +116,7 @@ s.meta['Acknowledgements'] =f"""
 ###########################################
 i_section = 0
 s.open_section()
-###############################################################################
+###########################################################################
 intro = """
 <h2 class="title">{title}</h2>
 <h3>{author_link}</h3>
@@ -127,46 +127,39 @@ intro += """
 
 {Acknowledgements}
 """.format(**meta)
-###############################################################################
-# s.add_slide(content=intro)
-#
-# s.add_slide(content=s.content_figures(
-#     #[path2('qr.png')], bgcolor="black",
-#     [os.path.join(figpath_slides, 'mire.png')], bgcolor=meta['bgcolor'],
-#     height=s.meta['height']*1.),
-#     #image_fname=os.path.join(figpath_aSPEM, 'mire.png'),
-#     notes="""
-# Check-list:
-# -----------
-#
-# * (before) bring VGA adaptors, AC plug, remote, pointer
-# * (avoid distractions) turn off airport, screen-saver, mobile, sound, ... other running applications...
-# * (VP) open monitor preferences / calibrate / title page
-# * (timer) start up timer
-# * (look) @ audience
-#
-# http://pne.people.si.umich.edu/PDF/howtotalk.pdf
-#
-#  """)
+###########################################################################
+s.add_slide(content=intro)
+
+s.add_slide(content=s.content_figures(
+    #[path2('qr.png')], bgcolor="black",
+    [os.path.join(figpath_slides, 'mire.png')], bgcolor=meta['bgcolor'],
+    height=s.meta['height']*1.),
+    #image_fname=os.path.join(figpath_aSPEM, 'mire.png'),
+    notes="""
+Check-list:
+-----------
+
+* (before) bring VGA adaptors, AC plug, remote, pointer
+* (avoid distractions) turn off airport, screen-saver, mobile, sound, ... other running applications...
+* (VP) open monitor preferences / calibrate / title page
+* (timer) start up timer
+* (look) @ audience
+
+http://pne.people.si.umich.edu/PDF/howtotalk.pdf
+
+ """)
 #
 # s.add_slide(content=s.content_figures([figname_qr], cell_bgcolor=meta['bgcolor'], height=s.meta['height']*height_ratio) + '<BR><a href="{url}"> {url} </a>'.format(url=meta['url']),
 #             notes="All the material is available online - please flash this QRcode this leads to a page with links to further references and code ")
-
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-
+########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
 s.add_slide(content=intro,
             notes="""
 * (AUTHOR) Hello, I am Laurent Perrinet from the Institute of Neurosciences of
 la Timone in Marseille, a joint unit from the CNRS and the AMU
 
 * (OBJECTIVE)
+
+- Mieux comprendre les bases neurales des hallucinations;
 
 
 * Let's me first describe the motivation of this work...
@@ -259,7 +252,11 @@ s.add_slide(content=s.content_figures(
     2.1 Later imagery
 
     More than 20 years after the Viking 1 images were taken, a succession of spacecraft visited Mars and made new observations of the Cydonia region. These spacecraft have included NASA's Mars Global Surveyor (1997–2006) and Mars Reconnaissance Orbiter (2006–),[18] and the European Space Agency's Mars Express probe (2003–).[19] In contrast to the relatively low resolution of the Viking images of Cydonia, these new platforms afford much improved resolution. For instance, the Mars Express images are at a resolution of 14 m/pixel (46 ft/pixel) or better. By combining data from the High Resolution Stereo Camera (HRSC) on the Mars Express probe and the Mars Orbiter Camera (MOC) on board NASA's Mars Global Surveyor it has been possible to create a three-dimensional representation of the "Face on Mars".[20]
+
     """)
+
+
+    # TODO : add vasarely / etienne
 s.close_section()
 
 i_section += 1
@@ -324,7 +321,7 @@ s.add_slide(content="""
  <video controls autoplay loop width=99%/>
    <source type="video/mp4" src="{}">
  </video>
- """.format(s.embed_video(path2(figname))) + fle_bib,
+ """.format(path2(figname)) + fle_bib,
 notes="""
 
 so let's go back on earth
@@ -404,13 +401,25 @@ title = meta['sections'][i_section]
 s.add_slide_outline(i_section,
 notes="""
 
-.
 
-Imaging cortical correlates of illusion in early visual cortex.
-
-Nature 428, 423-426. (see movies of the illusion and its cortical correlate)
 
 """)
+
+for no in ['2a', '2b', '3', '7']:
+    s.add_slide(content=s.content_figures(
+    [path2('Bressloff2002Fig' + no + '.png')], title=title, embed=False,
+    height=s.meta['height']*height_ratio) + bib,
+   notes="""
+
+Bressloff, P. C., Cowan, J. D., Golubitsky, M., Thomas, P. J., & Wiener, M. C. (2002). What geometric visual hallucinations tell us about the visual cortex. Neural Computation, 14(3), 473–491.
+
+
+ Here, we sum- marize a theory of their origin in visual cortex (area V1), based on the assumption that the form of the retino–cortical map and the architecture of V1 determine their geometry.
+
+ Using this symmetry, we show that the various patterns of activity that spontaneously emerge when V1’s spatially uniform resting state becomes unstable correspond to the form constants when transformed to the vi- sual 􏰮eld using the retino-cortical map. The results are sensitive to the detailed speci􏰮cation of the lateral connectivity and suggest that the cortical mechanisms that generate geometric visual hallucinations are closely related to those used to process edges, contours, surfaces, and textures.
+
+""")
+
 
 bib = s.content_bib("Jancke, Chavane, Naaman and Grinvald", "2004", 'Nature', url="http://homepage.ruhr-uni-bochum.de/Dirk.Jancke/line-motion-examples.html")
 
@@ -449,6 +458,7 @@ s.add_slide(content="""
  """.format(s.embed_video(path2(figname))) ,
 notes="""
 
+Line motion illusion.
 
 """)
 
@@ -457,6 +467,10 @@ s.add_slide(content=s.content_figures(
     [path2('Jancke_etal2004.png')], title=title, embed=False,
     height=s.meta['height']*height_ratio) + bib,
    notes="""
+
+Imaging cortical correlates of illusion in early visual cortex.
+
+Nature 428, 423-426. (see movies of the illusion and its cortical correlate)
 
 """)
 
@@ -509,11 +523,8 @@ In particular, we found that the activity that we recorded fitted well with a me
 """)
 s.close_section()
 
-###############################################################################
-# 🏄🏄🏄🏄🏄🏄🏄🏄 OUTRO - 5''  🏄🏄🏄🏄🏄🏄🏄🏄
-###############################################################################
-###############################################################################
-s.open_section()
+############################################################################ 🏄🏄🏄🏄🏄🏄🏄🏄 OUTRO - 5''  🏄🏄🏄🏄🏄🏄🏄🏄
+######################################################################################################################################################s.open_section()
 s.add_slide(content=intro,
             notes="""
 
@@ -527,15 +538,7 @@ s.add_slide(content=s.content_figures([figname_qr], cell_bgcolor=meta['bgcolor']
 
 s.close_section()
 
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-###############################################################################
-
+########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################
 
 if slides_filename is None:
     with open("README.md", "w") as text_file:

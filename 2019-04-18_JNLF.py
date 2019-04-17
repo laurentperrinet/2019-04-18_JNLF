@@ -422,7 +422,7 @@ notes="""
 
 bib = s.content_bib("Bressloff et al", "2002", 'Neural Computation', url="http://homepage.ruhr-uni-bochum.de/Dirk.Jancke/line-motion-examples.html")
 
-for no in ['2a', '2b', '3', '7']:
+for no in ['2b', '2a', '3', '7']:
     s.add_slide(content=s.content_figures(
     [path2('Bressloff2002Fig' + no + '.png')], title=None, #title, embed=s.meta['embed'],
     height=s.meta['height']*height_ratio) + bib,

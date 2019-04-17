@@ -66,7 +66,7 @@ meta = dict(
  time_end = '16:30:00',
  url=f'https://laurentperrinet.github.io/talk/{slugify(tag)}',
  sections=['Illusions visuelles & hallucinations',
-          'Hallucinations: quand les illusions deviennenty réelles',
+          'Hallucinations: quand les illusions deviennent réelles',
           'Une neuro-anatomie fonctionnelle des illusions?',
           ]
 )
@@ -391,7 +391,7 @@ Especially, by manipulating the *a priori* precision of internal beliefs at the 
     s.add_slide(content=s.content_figures(
 [os.path.join(figpath_talk, fname)], bgcolor="white",
 #title=title,
- height=s.meta['height']*height_ratio) + freemove_bib,
+ height=s.meta['height']*height_ratio*height_ratio) + freemove_bib,
 notes=note)
 
 s.close_section()
@@ -409,6 +409,9 @@ notes="""
 
 
 """)
+
+
+bib = s.content_bib("Bressloff et al", "2002", 'Neural Computation', url="http://homepage.ruhr-uni-bochum.de/Dirk.Jancke/line-motion-examples.html")
 
 for no in ['2a', '2b', '3', '7']:
     s.add_slide(content=s.content_figures(

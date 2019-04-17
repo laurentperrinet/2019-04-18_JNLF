@@ -221,7 +221,7 @@ http://i2.cdn.cnn.com/cnnnext/dam/assets/150410134301-cat-going-up-or-down-super
 
 """)
 
-url =  '<a href https://en.wikipedia.org/wiki/The_dress">#TheDress</a>'
+url =  '<a href https://en.wikipedia.org/wiki/The_dress">#TheDress</a>: #whiteandgold or #blackandblue ?'
 
 s.add_slide(content=s.content_figures(
     [

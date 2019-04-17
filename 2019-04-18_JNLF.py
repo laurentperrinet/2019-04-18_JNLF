@@ -8,6 +8,8 @@ fig_width = 12
 import os
 home = os.environ['HOME']
 figpath_talk = 'figures'
+def path2(fname):
+    return os.path.join(figpath_talk, fname)
 figpath_slides = os.path.join(home, 'nextcloud/libs/slides.py/figures/')
 #
 import sys
@@ -32,13 +34,13 @@ height_px = 80
 height_ratio = .7
 
 meta = dict(
- embed = True,
- draft = DEBUG, # show notes etc
- width= 1600,
- height= 1000,
+ embed=False,
+ draft=DEBUG, # show notes etc
+ width=1600,
+ height=1000,
  # width= 1280, #1600,
  # height= 1024, #1000,
- margin= 0.1618,#
+ margin=.01, # 0.1618,#
  reveal_path='https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.7.0/',
  #reveal_path='https://s3.amazonaws.com/hakim-static/reveal-js/',
  theme='simple',
@@ -76,7 +78,7 @@ meta = dict(
 import pathlib
 pathlib.Path(figpath_talk).mkdir(parents=True, exist_ok=True)
 
-figname_qr = os.path.join(figpath_talk, 'qr.png')
+figname_qr = path2('qr.png')
 if not os.path.isfile(figname_qr):
     import pyqrcode as pq
     code = pq.create(meta['url'])
@@ -128,7 +130,7 @@ intro += """
 # s.add_slide(content=intro)
 #
 # s.add_slide(content=s.content_figures(
-#     #[os.path.join(figpath_talk, 'qr.png')], bgcolor="black",
+#     #[path2('qr.png')], bgcolor="black",
 #     [os.path.join(figpath_slides, 'mire.png')], bgcolor=meta['bgcolor'],
 #     height=s.meta['height']*1.),
 #     #image_fname=os.path.join(figpath_aSPEM, 'mire.png'),
@@ -174,11 +176,23 @@ la Timone in Marseille, a joint unit from the CNRS and the AMU
 
 """)
 
-bib = s.content_bib("Akiyoshi KITAOKA", "2010", 'wwww', url="http://www.ritsumei.ac.jp/~akitaoka/index-e.html")
+url =  '<a href https://en.wikipedia.org/wiki/Hering_illusion">Hering illusion</a>'
+
+s.add_slide(content=s.content_figures(
+[path2('Hering_illusion.svg')],
+        title=None, #'Classical visual illusions',
+        height=s.meta['height']*.9) + url,
+notes="""
+
+
+""")
+
+url =  '<a href http://www.ritsumei.ac.jp/~akitaoka/index-e.html">Akiyoshi KITAOKA</a>'
 
 s.add_slide(content=s.content_figures(
 ['https://www.illusionsindex.org/images/illusions/Rotating-Snakes/42_rotsnakes_main.jpg'],
-        title=' Rotating snakes ', height=s.meta['height']*.825) + bib,
+        title=None, #'Rotating snakes',
+        height=s.meta['height']*.85) + url,
 notes="""
 https://www.illusionsindex.org/i/rotating-snakes
 
@@ -210,7 +224,10 @@ http://i2.cdn.cnn.com/cnnnext/dam/assets/150410134301-cat-going-up-or-down-super
 url =  '<a href https://en.wikipedia.org/wiki/The_dress">#TheDress</a>'
 
 s.add_slide(content=s.content_figures(
-    [os.path.join(figpath_talk, 'The_Dress_(viral_phenomenon).png')],
+    [
+    path2('The_Dress_(viral_phenomenon).png'),
+    path2('Wikipe-tan_wearing_The_Dress.svg'),
+    ], fragment=True,
         title=None, height=s.meta['height']*.825) + url,
 notes="""
 
@@ -221,14 +238,18 @@ The dress is a photograph that became a viral internet sensation on 26 February 
 The photo originated from a washed-out colour photograph of a dress posted on the social networking service Tumblr. Within the first week after the surfacing of the image, more than 10 million tweets mentioned the dress, using hashtags such as #thedress, #whiteandgold, and #blackandblue. Although the actual colour was eventually confirmed as blue and black,[3][4] the image prompted many discussions, with users debating their opinions on the colour and how they perceived the dress in the photograph as a certain colour. Members of the scientific community began to investigate the photo for fresh insights into human color vision.
 
 The dress itself, which was identified as a product of the retailer Roman Originals, experienced a major surge in sales as a result of the incident. The retailer also produced a one-off version of the dress in white and gold as a charity campaign.
+
+Two ways in which the photograph of The dress may be perceived:
+* black and blue under a yellow-tinted illumination (left figure) or
+* white and gold under a blue-tinted illumination (right figure).
+
 """)
 
 
 bib = s.content_bib("Cydonia Mensae", "1976", 'Viking Orbiter image', url="Viking Orbiter image")
-for fname in ['Face-on-mars.jpg', 'Viking_moc_face_20m.gif']:
-    s.add_slide(content=s.content_figures(
-        [os.path.join(figpath_talk, fname)],
-            title="Paréidolie", height=s.meta['height']*.825) + url,
+s.add_slide(content=s.content_figures(
+        [path2(fname) for fname in ['Face-on-mars.jpg', 'Viking_moc_face_20m_low.png', 'Viking_moc_face_20m_high.png']], fragment=True,
+            title="Paréidolie", height=s.meta['height']*.5) + bib,
     notes="""
     Cydonia was first imaged in detail by the Viking 1 and Viking 2 orbiters. Eighteen images of the Cydonia region were taken by the orbiters, of which seven have resolutions better than 250 m/pixel (820 ft/pixel). The other eleven images have resolutions that are worse than 550 m/pixel (1800 ft/pixel) and are of limited use for studying surface features. Of the seven good images, the lighting and time at which two pairs of images were taken are so close as to reduce the number to five distinct images. The Mission to Mars: Viking Orbiter Images of Mars CD-ROM set image numbers for these are: 035A72 (VO-1010), 070A13 (VO-1011), 561A25 (VO-1021), 673B54 & 673B56 (VO-1063), and 753A33 & 753A34 (VO-1028).[11][12]
 
@@ -257,7 +278,7 @@ Indeed, such a model already exists, the onlin BCP, and we will adapt it for our
 url =  'full code @ <a href="https://github.com/chloepasturel/AnticipatorySPEM">github.com/chloepasturel/AnticipatorySPEM</a>'
 
 s.add_slide(content=s.content_figures(
-   [os.path.join(figpath_talk, 'scheme_thorpe.jpg')], bgcolor="black",
+   [path2('scheme_thorpe.jpg')], bgcolor="black",
    height=s.meta['height']*.90),
 notes="""
 
@@ -270,7 +291,7 @@ notes="""
 
 
 s.add_slide(content=s.content_figures(
-    [os.path.join(figpath_talk, 'tsonga.png')], bgcolor="black",
+    [path2('tsonga.png')], bgcolor="black",
     height=s.meta['height']*.90),
     notes="""
  * let's move to a human, in particular a tennis player ---here (highly trained) Jo-Wilfried Tsonga at Wimbledon---...
@@ -280,7 +301,7 @@ s.add_slide(content=s.content_figures(
   """)
 
 s.add_slide(content=s.content_figures(
-    [os.path.join(figpath_talk, 'figure-tsonga.png')], bgcolor="black",
+    [path2('figure-tsonga.png')], bgcolor="black",
     height=s.meta['height']*.90),
     #image_fname=os.path.join(figpath, 'figure-tsonga.png'), embed=False,
         notes="""
@@ -293,6 +314,7 @@ s.add_slide(content=s.content_figures(
 
  """)
 
+figname='flash_lag.mp4'
 
 fle_bib = s.content_bib("Khoei, Masson and LP", "2017", 'PLoS CB', url="http://invibe.net/LaurentPerrinet/Publications/KhoeiMassonPerrinet17")
 
@@ -300,7 +322,7 @@ s.add_slide(content="""
  <video controls autoplay loop width=99%/>
    <source type="video/mp4" src="{}">
  </video>
- """.format(s.embed_video(os.path.join(figpath_talk, 'flash_lag.mp4'))) + fle_bib,
+ """.format(s.embed_video(path2(figname))) + fle_bib,
 notes="""
 
 so let's go back on earth
@@ -325,7 +347,7 @@ As a matter of fact, the motion extrapolation hypothesis was challenged because 
 
 
 s.add_slide(content=s.content_figures(
-    [os.path.join(figpath_talk, 'FLE_histogram.png')], title=title, embed=False,
+    [path2('FLE_histogram.png')], title=title, embed=False,
     height=s.meta['height']*.8) + fle_bib,
    notes="""
 
@@ -336,6 +358,37 @@ s.add_slide(content=s.content_figures(
 * Interestingly, and thanks to the reviewers of the paper, we could extend our results to the estimation of the dot position from the dMBP model during the motion reversal experiment. In the motion reversal experiment, the moving dot reverses its direction  at the middle of the trajectory (i.e., at $t=500~ms$,  as indicated by the mid-point vertical dashed line).  In the left column (target layer) and as in previous slide, we show the histogram of inferred positions  during the dot motion and a trace of its position with the highest probability  as a function of time.  As expected, results are identical to that in the previous slide in the first half period.  At the moment of the motion reversal,  the model output is consistent with previous psychophysical reports.  First, the estimated position follows the extrapolated trajectory  until the (delayed) sensory information about the motion reversal reaches the system  (at $t=600~ms$, green vertical dashed line).  Then, the velocity is quickly reseted and converges to the new (reversed) motion  such that the estimated position ``jumps'' to a position corresponding  to the updated velocity.  In the right column (smoothed layer), we show the results of the same data  after a smoothing operation of $\tau_s=100~ms$ in subjective time.  This different read-out from the inferred positions  corresponds to the behavioral results obtained in some experiments,  such as that from~\citet{Whitney98}.
 
 """)
+
+
+
+freemove_bib = ''
+freemove_bib += s.content_bib("Friston , Adams, LP and Breakspear", "2012", 'Frontiers in Psychology', url="https://laurentperrinet.github.io/publication/friston-12/")
+freemove_bib += s.content_bib("Adams, LP and Friston", "2012", 'PLoS ONE', url="https://laurentperrinet.github.io/publication/adams-12/")
+freemove_bib += s.content_bib("LP, Adams and Friston", "2015", 'Biological Cybernetics', url="https://laurentperrinet.github.io/publication/perrinet-adams-friston-14/")
+
+
+#for fname in ['figure1.png', 'figure2.png']:
+# figpath_law = os.path.join(home, 'quantic/2016_science/2016-10-13_LAW/figures')
+for fname, note in zip(['friston_figure1.png', 'friston_figure2.png'], ["""
+* This schematic shows the dependencies among various quantities modelling exchanges of an agent with the environment. It shows the states of the environment and the system in terms of a probabilistic dependency graph, where connections denote directed (causal) dependencies. The quantities are described within the nodes of this graph -- with exemplar forms for their dependencies on other variables.
+
+* Hidden (external) and internal states of the agent are separated by action and sensory states. Both action and internal states -- encoding a conditional probability density function over hidden states -- minimise free energy. Note that hidden states in the real world and the form of their dynamics can be different from that assumed by the generative model; (this is why hidden states are in bold. )
+""","""
+*  Active inference uses a generalisation of Kalman filtering to provide Bayes optimal estimates of hidden states and action in generalized coordinates of motion. As we have seen previously, the central nervous system has to contend with axonal delays, both at the sensory and the motor levels. Representing hidden states in generalized coordinates provides a simple way of compensating for both these delays.
+
+* This mathematical framework can be mapped to the anatomy of the visual system. Similar to the sketch that we have shown above, "compiling" (that is, solving) the equations of Free-energy minimization forms a set of coupled differential equations which correpond to different node along the visuo-oculomotor pathways.
+
+
+Practically, the predictive power of AI in modeling such an agent is revealed by studying deviations from the median behavior within a population of agents. For instance, there are acute differences in the smooth pursuit eye movements (SPEM) between patients from (control) neurotypic or schizophrenic groups. First, SPEM are distinct from the saccades defined above as they are voluntary eye movements which aim at stabilizing the retinal image of a smoothly moving visual object. For a target following the motion of a pendulum for instance, the eye will produce a prototypical response to follow this predictable target. Interestingly, schizophrenic agents tend to produce a different pattern of SPEM in the case that the pendulum is occluded on half cycles (for instance, as it passes behind an opaque cardboard on one side from the midline). In general, SPEM may still follow the target, as it is occluded (behind the cardboard) yet with a lower gain [@Barnes91]. As the target reappears from behind the occluder, schizophrenic agents engage more quickly to a SPEM response [@Avila06]. Extending the agent modeled in [@Friston12], an agent which has the capability to smoothly follow such moving object was modeled in [@Adams12]. This model allows in particular to understand most prototypical SPEM as a Bayes-optimal solution to minimize surprise in the perception / action loop implemented in the agent's dependency graph.
+
+Especially, by manipulating the *a priori* precision of internal beliefs at the different levels of the hierarchical model, one could reproduce different classes of SPEM behaviors which reproduce classical psychophysical stimuli. For instance, [@Adams12] found for the half-cycle occluded pendulum that manipulating the post-synaptic gain of predictive neurons reproduced behaviors observed in schizophrenia and control populations. Such a difference in the balance of information flow could have for instance a genetic origin in the expression of this gain and vicariously in the behavior of this population. Importantly, such a method thus allows to perform quantitative predictions: Such applications of computational neuroscience seem particularly relevant for a better understanding of the diversity of behaviors in the human population (see for instance [@Karvelis18autistic; @Kent19]).
+
+"""]):
+    s.add_slide(content=s.content_figures(
+[os.path.join(figpath_talk, fname)], bgcolor="white",
+#title=title,
+ height=s.meta['height']*height_ratio) + freemove_bib,
+notes=note)
 
 s.close_section()
 
@@ -349,7 +402,7 @@ title = meta['sections'][i_section]
 s.add_slide_outline(i_section,
 notes="""
 
-Jancke D, Chavane F, Na'aman S, Grinvald A (2004).
+.
 
 Imaging cortical correlates of illusion in early visual cortex.
 
@@ -357,17 +410,99 @@ Nature 428, 423-426. (see movies of the illusion and its cortical correlate)
 
 """)
 
+bib = s.content_bib("Jancke, Chavane, Naaman and Grinvald", "2004", 'Nature', url="http://homepage.ruhr-uni-bochum.de/Dirk.Jancke/line-motion-examples.html")
+
+def create_movie(figname, duration=1.5,
+                radius=1/18, length=.618,
+                fps=50, W=1000, H=600):
+    import gizeh as gz
+    import moviepy.editor as mpy
+
+    r = W*radius
+    s = dict(fill=(1, 1, 1), ly=r)
+    def make_frame(t):
+        surface = gz.Surface(W, H, bg_color=(0, 0, 0))
+        if t > duration/3:
+            if t < duration*2/3:
+                x = W/2. - length*W/2 + r/2
+                rect = gz.rectangle(xy=(x, H/2.),
+                                 lx=r, **s)
+            else:
+                rect = gz.rectangle(xy=(W/2., H/2.),
+                                    lx=length*W, **s)
+            rect.draw(surface)
+        return surface.get_npimage()
+
+    clip = mpy.VideoClip(make_frame, duration=duration)
+    clip.write_videofile(path2(figname), fps=fps)
+    return 'ok'
+
+figname='line_motion.mp4'
+if not os.path.isfile(path2(figname)): create_movie(figname)
+
+s.add_slide(content="""
+ <video controls autoplay loop width=99%/>
+   <source type="video/mp4" src="{}">
+ </video>
+ """.format(s.embed_video(path2(figname))) ,
+notes="""
+
+
+""")
+
+
 s.add_slide(content=s.content_figures(
-    [os.path.join(figpath_talk, 'Jancke_etal2004.png')], title=title, embed=False,
-    height=s.meta['height']*.8) + fle_bib,
+    [path2('Jancke_etal2004.png')], title=title, embed=False,
+    height=s.meta['height']*.8) + bib,
    notes="""
 
 """)
 
+
+def create_movie(figname, duration=1.5,
+                radius=1/13, length=1/8,
+                fps=50, W=1000, H=600):
+    import gizeh as gz
+    import moviepy.editor as mpy
+
+    r = W*radius
+    def make_frame(t):
+        surface = gz.Surface(W, H, bg_color=(0, 0, 0))
+        if t > duration/3:
+            if t < duration*2/3:
+                x = W/2. - length*W/2
+            else:
+                x = W/2. + length*W/2
+            rect = gz.rectangle(xy=(x, H/2.),
+                                fill=(1, 1, 1), lx=r, ly=r)
+            rect.draw(surface)
+        return surface.get_npimage()
+
+    clip = mpy.VideoClip(make_frame, duration=duration)
+    clip.write_videofile(path2(figname), fps=fps)
+    return 'ok'
+
+figname='phi_motion.mp4'
+if not os.path.isfile(path2(figname)): create_movie(figname)
+
+s.add_slide(content="""
+ <video controls autoplay loop width=99%/>
+   <source type="video/mp4" src="{}">
+ </video>
+ """.format(s.embed_video(path2(figname))) ,
+notes="""
+
+
+""")
+
 s.add_slide(content=s.content_figures(
-    [os.path.join(figpath_talk, 'Chemla_etal2019.png')], title=title, embed=False,
-    height=s.meta['height']*.8) + fle_bib,
+    [path2('Chemla_etal2019.png')], title=title, embed=False,
+    height=s.meta['height']*.8) + bib,
    notes="""
+
+In a recent study [@Chemla19], we used VSDI to record the activity of the primary visual cortex (V1) of awake macaque monkeys. Is there any difference between the response to the single dot and that to the two dots? Indeed, VSD recordings allow to record the activity of populations of V1 neurons which are approximately at the scale of a cortical column. Additionally, the recorded response is rapid enough to capture the dynamics of the lrAM stimulus. Recordings show that as the evoked activity of the second stimulus reaches V1, a cortical suppressive wave propagates toward the retinotopic wave evoked by the first dot. This was put in evidence by statistically comparing the response of the brain to the response of the two dots in isolation. In particular, we found that thanks to this suppressive wave, the activity for the brain stimulus was more precise, suggesting that such suppressive wave could serve as predictive processing step to be read-out in upstream cortical areas.
+
+In particular, we found that the activity that we recorded fitted well with a mean-field model using a dynamical gain control. Qualitatively, this model reproduced the propagation of activity on the cortex. Importantly, this model allowed to show that the observed activity was best fitted when the speed of lateral connections within the mean-field was about 1 m/s, a propagation speed which is of the order of that measured for intra-cortical connections in the primary visual cortex (for a review, see [@Muller18]). A more functional (probabilistic) model also showed that the cortical suppressive wave allowed to disambiguate the stimulus by explaining away (that is, suppressing) ambiguous alternatives. As a consequence, (1) lateral interactions are key to generate traveling waves on the surface of the cortex and (2) these waves help disambiguate the input stimulus. This corresponds to the implementation of a predictive process using an *a priori* knowledge of smoothly-moving visual objects.
 
 """)
 s.close_section()

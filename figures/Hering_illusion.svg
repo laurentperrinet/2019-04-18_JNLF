@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="669.66052"
+   height="500"
+   version="1.1"
+   viewBox="-160 -256 669.66052 500"
+   id="svg77"
+   sodipodi:docname="Hering_illusion.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <metadata
+     id="metadata83">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs81" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1266"
+     inkscape:window-height="782"
+     id="namedview79"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="0.4609375"
+     inkscape:cx="-66.525661"
+     inkscape:cy="341"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg77" />
+  <g
+     id="g4618"
+     transform="rotate(-90,84.41514,-90.41514)">
+    <polyline
+       id="lna"
+       points="-341,0 341,0"
+       style="fill:none;stroke:#000077;stroke-width:1" />
+    <use
+       id="use3"
+       transform="rotate(10)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use5"
+       transform="rotate(19)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use7"
+       transform="rotate(28)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use9"
+       transform="rotate(36)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use11"
+       transform="rotate(43)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use13"
+       transform="rotate(49)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use15"
+       transform="rotate(54)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use17"
+       transform="rotate(58)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use19"
+       transform="rotate(61)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use21"
+       transform="rotate(64)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use23"
+       transform="rotate(67)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use25"
+       transform="rotate(70)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use27"
+       transform="rotate(72)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use29"
+       transform="rotate(74)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use31"
+       transform="rotate(76)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use33"
+       transform="rotate(77.5)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use35"
+       transform="rotate(79)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use37"
+       transform="rotate(-10)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use39"
+       transform="rotate(-19)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use41"
+       transform="rotate(-28)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use43"
+       transform="rotate(-36)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use45"
+       transform="rotate(-43)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use47"
+       transform="rotate(-49)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use49"
+       transform="rotate(-54)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use51"
+       transform="rotate(-58)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use53"
+       transform="rotate(-61)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use55"
+       transform="rotate(-64)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use57"
+       transform="rotate(-67)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use59"
+       transform="rotate(-70)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use61"
+       transform="rotate(-72)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use63"
+       transform="rotate(-74)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use65"
+       transform="rotate(-76)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use67"
+       transform="rotate(-77.5)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <use
+       id="use69"
+       transform="rotate(-79)"
+       xlink:href="#lna"
+       x="0"
+       y="0"
+       width="100%"
+       height="100%" />
+    <g
+       id="g75"
+       style="fill:none;stroke:#dd0000;stroke-width:3">
+      <polyline
+         id="polyline71"
+         points="-40,-256 -40,256" />
+      <polyline
+         id="polyline73"
+         points="40,-256 40,256" />
+    </g>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:13.33333302px;line-height:125%;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="356.06778"
+     y="229.28815"
+     id="text4541"><tspan
+       sodipodi:role="line"
+       id="tspan4543"
+       x="356.06778"
+       y="229.28815">https://en.wikipedia.org/wiki/Hering_illusion</tspan></text>
+</svg>

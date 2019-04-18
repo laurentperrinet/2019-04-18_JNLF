@@ -418,7 +418,6 @@ Philosophers have also been interested in what illusions like the Rotating Snake
 
 http://i2.cdn.cnn.com/cnnnext/dam/assets/150410134301-cat-going-up-or-down-super-169.jpg
 
-
 """)
 
 bib = s.content_bib("Bressloff et al", "2002", 'Neural Computation', url="http://homepage.ruhr-uni-bochum.de/Dirk.Jancke/line-motion-examples.html")

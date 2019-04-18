@@ -185,40 +185,6 @@ notes="""
 
 """)
 
-url =  'Rotating Snakes - <a href http://www.ritsumei.ac.jp/~akitaoka/index-e.html">Akiyoshi KITAOKA</a>'
-
-s.add_slide(content=s.content_figures(
-[path2('42_rotsnakes_main.jpg')],
-#['https://www.illusionsindex.org/images/illusions/Rotating-Snakes/42_rotsnakes_main.jpg'],
-        title=None, #'Rotating snakes',
-        height=s.meta['height']*height_ratio) + url,
-notes="""
-https://www.illusionsindex.org/i/rotating-snakes
-
-See also Professor Kitaoka’s personal website at http://www.ritsumei.ac.jp/~akitaoka/index-e.html
-
-The image consists of an arrangement of snake-like concentric circles, defined by contrasting regions of colour.
-
-
-Instructions
-
-Allow your gaze to move naturally over the figure, coming to rest from time to time. Try fixing your gaze at a point and see what happens.
-Effect
-
-You should have a visual experience as of the 'snakes' rotating, when in fact they are stationary. When you fix your gaze this illusory motion ceases. Note that some snakes rotate clockwise, others anticlockwise.
-The Rotating Snakes Illusion evokes a perceptual experience of illusory motion. It was invented by Japanese psychologist and academic Akiyoshi Kitaoka (Kitaoka and Ashida 2003). It is one of a class of peripheral drift illusions; whatever part of the figure is in the centre of our visual field appears motionless (as indeed it is), while the parts seen in our peripheral vision appear to move.
-
-No-one is quite sure as to how the Rotating Snakes illusion works, although there is some consensus that it involves a difference in the processing latency of signals corresponding to different parts of the figure. Conway et al. (2003) propose that high-contrast areas are processed faster than low-contrast areas, where contrast is defined globally over the entire receptive field of an individual retinal neuron; in this case, the regions of highest contrast appear in the outermost ‘coil’ of the snakes. The illusory motion is then explained as an example of the reverse phi phenomenon first described in Anstis and Rogers (1974): a bright spot appearing and fading at some point in the visual field, subsequently followed by a dark spot appearing and fading at some other point, will create a sense of motion from the dark stimulus toward the light stimulus if this pattern is cycled. Looking closely at the figure, you will notice that adjacent ‘snakes’ are patterned so that the colours appear in the opposite order. If the reverse phi phenomenon explains illusory motion, the reversing patterns explain why some snakes rotate clockwise and others anticlockwise. A processing latency mechanism is consistent with the fact that the illusion ceases when our gaze is fixed, because in that case the signal from each part of the visual field is fairly constant. This suggests that blinks and small involuntary movements of the eye called ‘saccades’ may play an important role in triggering the illusion (Otero-Mill et al. 2012).
-
-The Rotating Snakes Illusion is also interesting because it is relevant to debates about modularity, cognitive penetration, and the nature of experience. To explain: on the hypothesis that the mind is modular, a mental module is a kind of semi-independent department of the mind which deals with particular types of inputs, and gives particular types of outputs, and whose inner workings are not accessible to the conscious awareness of the person – all one can get access to are the relevant outputs. So, in the case of the Rotating Snakes Illusion, a standard way of explaining why experience of the illusion persists even though one knows that one is experiencing an illusion is that the module, or modules, which constitute the visual system are ‘cognitively impenetrable’ to some degree – i.e. their inner workings and outputs cannot be influenced by conscious awareness. For a general discussion of cognitive penetration, see Macpherson (2012).
-
-Philosophers have also been interested in what illusions like the Rotating Snakes Illusion can tell us about the nature of experience. For example, in the case of experiencing the Rotating Snakes Illusion, it would seem to be that the one can know that nothing on the screen rotates whilst at the same time experiences rotating snakes. If so, then this might count against the claim the perceptual states are belief-like, because if perceptual states were belief like then, when experiencing the Rotating Snakes Illusion one would simultaneously believe that the snakes were, and were not, rotating. This would seem to entail that one was being irrational, because one would simultaneously be holding contradictory beliefs. But it seems highly implausible that one is being irrational when under going this illusion. For discussion of this general point about whether perceptions are like beliefs, see Crane & French (2016).
-
-
-http://i2.cdn.cnn.com/cnnnext/dam/assets/150410134301-cat-going-up-or-down-super-169.jpg
-
-
-""")
 
 url =  '<a href https://en.wikipedia.org/wiki/The_dress">#TheDress</a>: #whiteandgold or #blackandblue ?'
 
@@ -419,6 +385,41 @@ notes="""
 
 """)
 
+
+url =  'Rotating Snakes - <a href http://www.ritsumei.ac.jp/~akitaoka/index-e.html">Akiyoshi KITAOKA</a>'
+
+s.add_slide(content=s.content_figures(
+[path2('42_rotsnakes_main.jpg')],
+#['https://www.illusionsindex.org/images/illusions/Rotating-Snakes/42_rotsnakes_main.jpg'],
+        title=None, #'Rotating snakes',
+        height=s.meta['height']*height_ratio) + url,
+notes="""
+https://www.illusionsindex.org/i/rotating-snakes
+
+See also Professor Kitaoka’s personal website at http://www.ritsumei.ac.jp/~akitaoka/index-e.html
+
+The image consists of an arrangement of snake-like concentric circles, defined by contrasting regions of colour.
+
+
+Instructions
+
+Allow your gaze to move naturally over the figure, coming to rest from time to time. Try fixing your gaze at a point and see what happens.
+Effect
+
+You should have a visual experience as of the 'snakes' rotating, when in fact they are stationary. When you fix your gaze this illusory motion ceases. Note that some snakes rotate clockwise, others anticlockwise.
+The Rotating Snakes Illusion evokes a perceptual experience of illusory motion. It was invented by Japanese psychologist and academic Akiyoshi Kitaoka (Kitaoka and Ashida 2003). It is one of a class of peripheral drift illusions; whatever part of the figure is in the centre of our visual field appears motionless (as indeed it is), while the parts seen in our peripheral vision appear to move.
+
+No-one is quite sure as to how the Rotating Snakes illusion works, although there is some consensus that it involves a difference in the processing latency of signals corresponding to different parts of the figure. Conway et al. (2003) propose that high-contrast areas are processed faster than low-contrast areas, where contrast is defined globally over the entire receptive field of an individual retinal neuron; in this case, the regions of highest contrast appear in the outermost ‘coil’ of the snakes. The illusory motion is then explained as an example of the reverse phi phenomenon first described in Anstis and Rogers (1974): a bright spot appearing and fading at some point in the visual field, subsequently followed by a dark spot appearing and fading at some other point, will create a sense of motion from the dark stimulus toward the light stimulus if this pattern is cycled. Looking closely at the figure, you will notice that adjacent ‘snakes’ are patterned so that the colours appear in the opposite order. If the reverse phi phenomenon explains illusory motion, the reversing patterns explain why some snakes rotate clockwise and others anticlockwise. A processing latency mechanism is consistent with the fact that the illusion ceases when our gaze is fixed, because in that case the signal from each part of the visual field is fairly constant. This suggests that blinks and small involuntary movements of the eye called ‘saccades’ may play an important role in triggering the illusion (Otero-Mill et al. 2012).
+
+The Rotating Snakes Illusion is also interesting because it is relevant to debates about modularity, cognitive penetration, and the nature of experience. To explain: on the hypothesis that the mind is modular, a mental module is a kind of semi-independent department of the mind which deals with particular types of inputs, and gives particular types of outputs, and whose inner workings are not accessible to the conscious awareness of the person – all one can get access to are the relevant outputs. So, in the case of the Rotating Snakes Illusion, a standard way of explaining why experience of the illusion persists even though one knows that one is experiencing an illusion is that the module, or modules, which constitute the visual system are ‘cognitively impenetrable’ to some degree – i.e. their inner workings and outputs cannot be influenced by conscious awareness. For a general discussion of cognitive penetration, see Macpherson (2012).
+
+Philosophers have also been interested in what illusions like the Rotating Snakes Illusion can tell us about the nature of experience. For example, in the case of experiencing the Rotating Snakes Illusion, it would seem to be that the one can know that nothing on the screen rotates whilst at the same time experiences rotating snakes. If so, then this might count against the claim the perceptual states are belief-like, because if perceptual states were belief like then, when experiencing the Rotating Snakes Illusion one would simultaneously believe that the snakes were, and were not, rotating. This would seem to entail that one was being irrational, because one would simultaneously be holding contradictory beliefs. But it seems highly implausible that one is being irrational when under going this illusion. For discussion of this general point about whether perceptions are like beliefs, see Crane & French (2016).
+
+
+http://i2.cdn.cnn.com/cnnnext/dam/assets/150410134301-cat-going-up-or-down-super-169.jpg
+
+
+""")
 
 bib = s.content_bib("Bressloff et al", "2002", 'Neural Computation', url="http://homepage.ruhr-uni-bochum.de/Dirk.Jancke/line-motion-examples.html")
 

@@ -164,6 +164,9 @@ la Timone in Marseille, a joint unit from the CNRS and the AMU
 
 * (OBJECTIVE)
 
+Nous allons ici montrer comment les limites de la perception permettent et peuvent nous aider à mieux comprendre le fonctionnement du cerveau et de ses pathologies. En partant des illusions visuelles, nous allons ensuite explorer différentes hypothèses pour comprendre ses illusions, mais aussi pour aborder une neuro-anatomie fonctionnelle des hallucinations et illusions visuelles.
+
+
 - Mieux comprendre les bases neurales des hallucinations;
 
 
@@ -181,6 +184,7 @@ for suff in ['', '_without']:
         title=None, #'Classical visual illusions',
         height=s.meta['height']*height_ratio) + url,
 notes="""
+L’étymologie du mot illusion réfère à la tromperie et nous permet de définir les illusions visuelles comme une stimulation visuelle qui induit une perception décalée par rapport à la réalité physique (le stimulus proximal). Dans l’illusion classique dit de Hering par exemple (voir Figure @fig:hering), deux lignes parallèles placés sur un faisceau de lignes convergente semble courbées comme si le centre de l’image avait gonflé par rapport à sa périphérie. Cette illusion est robuste même si l’on prend une règle pour vérifier physiquement le parallélisme des lignes (ou simplement en enlevant les lignes fuyante): Il n’est pas possible de ne **pas** la percevoir. Ainsi, pour cette illusion comme pour une grande variété d’autres illusions visuelles statique ou dynamique ou sur d’autres modalités (comme le toucher), les illusions visuelles marquent tout d’abord par ce caractère quasi universel et intuitif, c’est-à-dire sans qu’il faille expliquer un mode d’emploi pour les illusions.
 
 
 """)
@@ -197,12 +201,7 @@ s.add_slide(content=s.content_figures(
 notes="""
 
 https://en.wikipedia.org/wiki/The_dress
-
-The dress is a photograph that became a viral internet sensation on 26 February 2015, when viewers disagreed over whether the dress pictured was coloured blue and black, or white and gold. The phenomenon revealed differences in human colour perception, which have been the subject of ongoing scientific investigations into neuroscience and vision science, with a number of papers published in peer-reviewed science journals.
-
-The photo originated from a washed-out colour photograph of a dress posted on the social networking service Tumblr. Within the first week after the surfacing of the image, more than 10 million tweets mentioned the dress, using hashtags such as #thedress, #whiteandgold, and #blackandblue. Although the actual colour was eventually confirmed as blue and black,[3][4] the image prompted many discussions, with users debating their opinions on the colour and how they perceived the dress in the photograph as a certain colour. Members of the scientific community began to investigate the photo for fresh insights into human color vision.
-
-The dress itself, which was identified as a product of the retailer Roman Originals, experienced a major surge in sales as a result of the incident. The retailer also produced a one-off version of the dress in white and gold as a charity campaign.
+À ce titre, une illusion récente est remarquable à bien des égards. En effet, certaines illusions illusions comme le cube de Necker sont multi-stable, dans le sens où la perception peut alterner autour de plusieurs interprétations possibles de la même image. Dans le cas de #LaRobe, nous avons une image qui a le pouvoir de diviser une population entre des perceptions alternatives. De plus, au lieu d’être créée par des scientifiques, cette illusion est née par [sérendipité](https://fr.wikipedia.org/wiki/S%C3%A9rendipit%C3%A9) à partir d’une simple photo prise lors de la préparation d’une cérémonie de mariage. Postée sur les réseaux sociaux, cette photo a eu un destin fulgurant et mondial grâce a l’ambiguïté sur l'interprétation de la couleur de la robe. Ainsi si je vous demande de donner vous-même votre avis à partir de la Figure @fig:larobe, pensez-vous qu’elle est blanche et or ou alors qu’elle est bleu avec des bandes noires ? Même si le débat fait toujours rage, les explications scientifiques (entre autres articles scientifiques ou sessions spéciales de conférence) convergent sur une perception de la couleur de la figure qui est modifiée par le contexte du fond. En effet notre système visuel doit pouvoir identifier la couleur d’un objet (par exemple pour évaluer la maturité d’un fruit comme une balade) quelque soit les conditions lumineuses, un matin le midi avec une lumière crue ou le crépuscule avec une lumière orangée du soir. Ici le fond est surexposé et rend cette interprétation ambiguë et deux interprétations sont possibles pour cette image comme illustré dans la figure de droite. Je peux vous dévoiler que sur un échantillon représentatif une courte majorité voilà la robe bleue et noir. Un aspect remarquable de cette illusion et d’une part sa stabilité et d’autre part la difficulté de changer d’interprétation une fois une première interprétation formée, c’est-à-dire de passer une couleur bleue à une perception d’une couleur blanche. Cette illusion est à mes yeux d’autant plus puissante car elle met en évidence que les images sont interprétées par notre système visuel. Celà apporte aussi ce message universel qu'une propriété de nos fonctions cognitives et de pouvoir interpréter la même objet physique de différentes façons, et réconcilier des groupes humains qui peuvent avoir des façons contrastées de voir des objets physiques qui sont identiques. Pour reprendre le célèbre proverbe on pourrait dire que « l’illusion est humaine »!
 
 Two ways in which the photograph of The dress may be perceived:
 * black and blue under a yellow-tinted illumination (left figure) or
@@ -216,13 +215,9 @@ s.add_slide(content=s.content_figures(
         [path2(fname) for fname in ['Face-on-mars.jpg', 'Viking_moc_face_20m_low.png', 'Viking_moc_face_20m_high.png']], fragment=True,
             title="Paréidolie", height=s.meta['height']*.5) + bib,
     notes="""
-    Cydonia was first imaged in detail by the Viking 1 and Viking 2 orbiters. Eighteen images of the Cydonia region were taken by the orbiters, of which seven have resolutions better than 250 m/pixel (820 ft/pixel). The other eleven images have resolutions that are worse than 550 m/pixel (1800 ft/pixel) and are of limited use for studying surface features. Of the seven good images, the lighting and time at which two pairs of images were taken are so close as to reduce the number to five distinct images. The Mission to Mars: Viking Orbiter Images of Mars CD-ROM set image numbers for these are: 035A72 (VO-1010), 070A13 (VO-1011), 561A25 (VO-1021), 673B54 & 673B56 (VO-1063), and 753A33 & 753A34 (VO-1028).[11][12]
+Pour aller plus loin, il est intéressant de considérer cette image prise en 1971 par la sonde Viking d’une partie de la surface de la planète Mars (Figure @fig:viking). L’image est relativement floue, et les points noirs sont des erreurs de mesure  mais l’on distingue très clairement un visage de type humain comme une sculpture géante laisser là par une civilisation extraterrestre. Quelques 20 ans plus tard, de nouvelles images ont été réalisés par de nouvelles sondes spatiales et montrent aussi une forme de visage. Mais une fois la résolution de l’image affinée, les détails du relief révèlent qu’il n’y a pas physiquement de sculpture de ce type mais seulement un simple rocher. C’est un cas de [paréidolie](https://fr.wikipedia.org/wiki/Par%C3%A9idolie) : quelque chose est perçu alors qu’il est physiquement absent. De la même façon, on peut voir un cheval courir dans les nuages, ou le visage du Christ dans un toast, le constat est le même : le système visuel et en particulier la perception qui en découlent non seulement interprète les images, mais sur surtout, il ne peut pas faire autrement que de générer une interprétation à partir d’images, et comme on vient de le voir même si elles ne font pas a priori sens. Dans ce genre d’illusion on se rapproche donc d’une hallucination, qui peut être définie comme une perception sans objet.
 
-    In one of the images taken by Viking 1 on July 25, 1976, a two-kilometre-long (1.2 mi) Cydonian mesa, situated at 40.75° north latitude and 9.46° west longitude,[13] had the appearance of a humanoid face. When the image was originally acquired, Viking chief scientist Gerry Soffen dismissed the "Face on Mars" in image 035A72[14] as a "trick of light and shadow".[15][16] However, a second image, 070A13, also shows the "face", and was acquired 35 Viking orbits later at a different sun-angle from the 035A72 image. This latter discovery was made independently by Vincent DiPietro and Gregory Molenaar, two computer engineers at NASA's Goddard Space Flight Center. DiPietro and Molenaar discovered the two misfiled images, Viking frames 035A72 and 070A13, while searching through NASA archives.[17]
-    2.1 Later imagery
-
-    More than 20 years after the Viking 1 images were taken, a succession of spacecraft visited Mars and made new observations of the Cydonia region. These spacecraft have included NASA's Mars Global Surveyor (1997–2006) and Mars Reconnaissance Orbiter (2006–),[18] and the European Space Agency's Mars Express probe (2003–).[19] In contrast to the relatively low resolution of the Viking images of Cydonia, these new platforms afford much improved resolution. For instance, the Mars Express images are at a resolution of 14 m/pixel (46 ft/pixel) or better. By combining data from the High Resolution Stereo Camera (HRSC) on the Mars Express probe and the Mars Orbiter Camera (MOC) on board NASA's Mars Global Surveyor it has been possible to create a three-dimensional representation of the "Face on Mars".[20]
-
+Pour résumer, les illusions visuelles, en plus de leur côté ludique, nous révèlent des caractéristiques essentielles de notre perception visuelle tant sur leurs caractéristiques universelles que sur les variabilités inter et intra individuelles. Malgré la diversité des formes des illusions visuelles et la diversité des explications qu’on peut leur faire correspondre, existe-t-il des points communs qui permettraient d’en avoir une compréhension unifiée ? Quelles pourraient être les liens profonds entre illusions visuelles avec des hallucinations aussi bien chez les sujets neuro-typique que dans des pathologies psychologiques?
     """)
 
 
@@ -238,24 +233,14 @@ s.open_section()
 title = meta['sections'][i_section]
 s.add_slide_outline(i_section,
 notes="""
-Indeed, these raw psycholophysical results are encouraging but since we used a generative model for generating the sequence, let's see if we can build a Bayesian model which would be optimal wrt to this generative model.
-
-Indeed, such a model already exists, the onlin BCP, and we will adapt it for our specific setting.
+Avant d’essayer de donner une réponse à ces questions, rappelons une contrainte fondamentale à laquelle notre cerveau est confronté : l’environnement et dynamique et notre cerveau est (relativement) lent pour traiter ces informations.
 """)
-
-
-url =  'full code @ <a href="https://github.com/chloepasturel/AnticipatorySPEM">github.com/chloepasturel/AnticipatorySPEM</a>'
 
 s.hide_slide(content=s.content_figures(
    [path2('scheme_thorpe.jpg')], bgcolor="black",
    height=s.meta['height']*height_ratio),
 notes="""
-
- * today, I would like  to focus on a particular problem which will help us unravel the dynamics of decision making: oculomotor delays.
- *
-  The central nervous system has to contend with axonal delays, both at the sensory and the motor levels. For instance, in the human visuo-oculomotor system, it takes approximately $ \tau_s=50~ms$ for the retinal image to reach the visual areas implicated in motion detection, and a further $ \tau_m=40~ms $ to reach the oculomotor muscles.
-
- * how does this impact behaviour? Indeed, one challenge for modelling is to understand EMs using AI as a problem of optimal motor control under axonal delays.
+ En effet les travaux de Simon Thorpe à Toulouse au Cerco ont montré des capacités ultra-rapide de catégorisation d’image chez les primates. Cette vitesse peut atteindre environ 100 ms chez l’humain [@tag:Kirchner06] et 80 ms chez le singe.
  """)
 
 
@@ -263,10 +248,7 @@ s.hide_slide(content=s.content_figures(
     [path2('tsonga.png')], bgcolor="black",
     height=s.meta['height']*height_ratio),
     notes="""
- * let's move to a human, in particular a tennis player ---here (highly trained) Jo-Wilfried Tsonga at Wimbledon---...
-
- * ...  trying to intercept a passing-shot ball at a (conservative) speed of $20~m.s^{-1}$, the position sensed on the retinal space corresponds to the instant when its image formed on the photoreceptors of the retina and reaches our hypothetical motion perception area behind:
-
+C’est remarquablement rapide mais relativement long si l'on considère cette fois-ci une tâche simple d’interception d’un objet en mouvement. Considérons par exemple un agent qui suit une balle de tennis lancée à une vitesse de 20 m/s à une distance de 1 m devant son regard.
   """)
 
 s.add_slide(content=s.content_figures(
@@ -274,13 +256,7 @@ s.add_slide(content=s.content_figures(
     height=s.meta['height']*height_ratio),
     #image_fname=os.path.join(figpath, 'figure-tsonga.png'), embed=s.meta['embed'],
         notes="""
-
- * and at this instant, the sensed physical position is lagging behind (as represented here by $\tau_s \cdot v 1~m$ ), that is, approximately at $45$ degrees of eccentricity (red dotted line),
-
- * while the  position at the moment of emitting the motor command will be $.8~m$ ahead of its present physical position ($\tau_m \cdot v$).
-
- * As a consequence, note that the player's gaze is directed to the ball at its **present** position (red  line), in anticipatory fashion. Optimal control directs action (future motion  of the eye) to the expected position (red dashed line) of the ball in the  future --- and the racket (black dashed line) to the expected position of the  ball when motor commands reach the periphery (muscles). This is obviously an interesting challenge for modelling an optimal control theory.
-
+ Au moment de passer dans l’axe de vision du joueur de tennis, la balle va être perçue en arrière de la trajectoire à cause du délai sensoriel. Plus précisément la balle est placé à l’instant où l’image est prise à environ 45° d’angle visuel en retard sur la position réelle actuelle de la balle. À noter que la position de la balle est sur l’axe de vision (telle celle figurée par cette position des yeux), mais que pour le système sensoriel, cette position au temps présent doit être anticipée. Notons aussi notons aussi que la position de la balle, dans cette représentation rétinienne, au moment où l’action sera réalisé (après le délai sensorimoteur total) pourra être estimé à partir de la continuité du mouvement de la balle. C’est-à-dire qu’elle sera encore environ à 45° d’angle visuel mais cette fois ci en avant de la trajectoire, dans son futur. Il semble incroyable que ce genre de voyage dans le temps puisse s’opérer dans notre cerveau, mais une simple illusion visuelle permet de mettre ces mécanismes en évidence.
  """)
 
 figname='flash_lag.mp4'
@@ -294,37 +270,18 @@ s.add_slide(content="""
  """.format(path2(figname)) + fle_bib,
 notes="""
 
-so let's go back on earth
-
-* ... but first let now apply this model compensating for the aforementioned visual delays using a well described visual illusion: the flash-lag effect:
-
-a first stimulus moves continuously across the screen along the central horizontal axis. In the FLE, as this moving stimulus reaches the center of the screen, a second stimulus is flashed just above it and in perfect vertical alignment. Despite the fact that the respective horizontal positions of each stimulus are physically identical when the flash occurs, the moving stimulus is most often perceived *ahead* of the flashed one.
-
-debate for 80 years revived recently
-
-- motion extrapolation
-- differential latency
-- post-diction
-
-we propose to extend the hypothesis previously proposed by Nihjawan that this effect is caused by the extrapolation of the stimulus' motion to compensate for the neural delay. However, this hypothesis was challenged by other hypothesis that this effect is due to either anatomy (differential latencies) or to the way visual awareness processes the sequence of events (the post-diction from Eagleman)
-
-As a matter of fact, the motion extrapolation hypothesis was challenged because you can notice that the FLE is still present at initiation of the movement but this effect is not seen if the moving dot abruptly stops at the moment of the flash
-
+En effet, l’illusion du flash retardé ("Flash Lag Effect" en anglais) permet de mettre en évidence des dynamiques de traitement dans le système visuel. Dans cette illusion, l’observateur doit fixer environ au centre de l’écran. Une cible en mouvement horizontal apparaît et quand elle passe aux environs du centre de l’écran, un bref flash est présenté immédiatement au-dessous du centre de l'image. Perceptivement, on observe chez une vaste majorité d’observateurs que la cible en mouvement est perçue, au moment du flash, *en avant* de la trajectoire. L’hypothèse originale de Romi Nijhawan propose que la cible est perceptivement représentée de telle façon à ce qu’elle occupe sa position au temps présent, donc de manière anticipée. Par contre, le flash est imprévu et sa position ne peut pas être anticipée. C’est ce que nous avons montré dans ce travail de modélisation qui montre une évaluation quantitative des production d’un tel modèle [@tag:KhoeiMassonPerrinet17].
 
 
 """)
 
 
-s.hide_slide(content=s.content_figures(
+s.add_slide(content=s.content_figures(
     [path2('FLE_histogram.png')], title=title, embed=s.meta['embed'],
     height=s.meta['height']*height_ratio) + fle_bib,
    notes="""
 
-* For that, we replot the movies I have just shown by showing for the dot the Histogram of the estimated positions as a function of time for the source layer (Left) and the target layer (right). The left-hand column illustrates the predictive model before delay compensation. The right-hand column illustrates the motion extrapolation model with delay compensation. Histograms of the inferred horizontal positions (blueish bottom panel) and  horizontal speed (redish top panel) are shown in columns  as a function  of time. A darker level corresponds to a higher probability, while a light  color corresponds to an unlikely estimation. In particular, we focus on three  particular epochs along the trajectory, corresponding to the standard, flash  initiated and terminated cycles. The timing of these epochs flashes are indicated by  dashed vertical lines. In dark, the physical time and in green the delayed  input knowing $\tau=100~ms$.
-
-* Activity in both models shows three different phases. First, there is a rapid  build-up of the precision of the target after the first appearance of the  moving dot (at $t=300~ms$). Consistently with the Frölich effect, the  beginning of the trajectory is seen ahead of its physical position. During the second phase, the moving dot is correctly tracked as both its velocity and position are correctly inferred. In the source layer, there is no extrapolation and the trajectory follows the delayed trajectory of the dot (green dotted line). In the target layer, motion extrapolation correctly predicts the position at the present time and the position follows the actual physical position of the dot (black dotted line). Finally, the third phase corresponds to  motion termination. The moving dot disappears and the corresponding activity vanishes in the source layer at $t=900~ms$. However, between $t=800~ms$ and $t=900~ms$, the dot position was extrapolated and predicted ahead of the terminal position. At $t=900~ms$, while motion information is absent, the position information is still transiently consistent and extrapolated using a broad, centered prior distribution of speeds. Although it is less precise, this position of the dot at flash termination is therefore not perceived as leading the flash.
-
-* Interestingly, and thanks to the reviewers of the paper, we could extend our results to the estimation of the dot position from the dMBP model during the motion reversal experiment. In the motion reversal experiment, the moving dot reverses its direction  at the middle of the trajectory (i.e., at $t=500~ms$,  as indicated by the mid-point vertical dashed line).  In the left column (target layer) and as in previous slide, we show the histogram of inferred positions  during the dot motion and a trace of its position with the highest probability  as a function of time.  As expected, results are identical to that in the previous slide in the first half period.  At the moment of the motion reversal,  the model output is consistent with previous psychophysical reports.  First, the estimated position follows the extrapolated trajectory  until the (delayed) sensory information about the motion reversal reaches the system  (at $t=600~ms$, green vertical dashed line).  Then, the velocity is quickly reseted and converges to the new (reversed) motion  such that the estimated position ``jumps'' to a position corresponding  to the updated velocity.  In the right column (smoothed layer), we show the results of the same data  after a smoothing operation of $\tau_s=100~ms$ in subjective time.  This different read-out from the inferred positions  corresponds to the behavioral results obtained in some experiments,  such as that from~\citet{Whitney98}.
+Plus généralement, ce travail nous a conduit à émettre l’hypothèse que le cerveau utilise les régularité statistiques du monde pour arriver d’une façon ou d’une autre à compenser les contraintes de délai et par exemple à « prédire le présent ». Une telle hypothèse permet de formaliser un bon nombre d’illusions et en particulier l’illusion de Hering que nous avons défini ci-dessus. En effet, les lignes fuyantes donnent un contexte de perspective et induisent un mouvement écologiquement significatif, comme une marche vers le point de fuite. À ce titre, les courbes horizontales de la figure de Hering sont le plus probablement perpendiculaires à l’axe de vision et à celui de la marche. Au niveau perceptif, elles sont donc placées à des distances différentes de l’œil et sont alors anticipées dans l’espace rétinien de telle sorte à ce que leur position est prédite à l’instant présent, d’où la forme bombée caractéristique de la perception dans cette illusion. Une extension de cette hypothèse est que le cerveau construit par des processus prédictif une image mentale de la scène visuelle. Une telle hypothèse permet de développer un formalisme théorique complet qui peut être validé quantitativement vis à vis de notre compréhension actuelle du cerveau.
 
 """)
 
@@ -349,18 +306,12 @@ freemove_bib += s.content_bib("LP, Adams and Friston", "2015", 'Biological Cyber
 #for fname in ['figure1.png', 'figure2.png']:
 # figpath_law = os.path.join(home, 'quantic/2016_science/2016-10-13_LAW/figures')
 for fname, note in zip(['friston_figure1.png', 'friston_figure2.png'], ["""
-* This schematic shows the dependencies among various quantities modelling exchanges of an agent with the environment. It shows the states of the environment and the system in terms of a probabilistic dependency graph, where connections denote directed (causal) dependencies. The quantities are described within the nodes of this graph -- with exemplar forms for their dependencies on other variables.
+Cette théorie a été formalisée par le professeur Karl Friston [@tag:Friston12] sous le terme de principe de minimisation de l’énergie libre. À ce jour, c'est le seul paradigme théorique qui soit aussi complet pour expliquer le fonctionnement global du cerveau. Sans rentrer dans les détails mathématiques de ce principe, cette théorie permet de formaliser des modèles génératif pour toute sensation qui est reçu par nos organes et de considérer une représentation interne comme un état dit caché, c’est-à-dire un état ou une représentation  interne que l’on va essayer d’estimer. L'ensemble de ces hypothèses définit un système dont on déduit ensuite une variable globale dite d’énergie libre, qui donne une borne supérieure à la surprise de l’agent connaissant un modèle génératif, des sensations, des états internes et des actions effectuées. L’agent peut alors minimiser cette variable propre pour prédire au mieux son état, comme la position d’une cible. On peut aussi considérer un agent qui puisse agir sur cette environnement et on parle alors d’inférence active. En utilisant cette formalisation, il est alors possible de l’exprimer sous forme d’équations qui reprennent la structure du passage d’information dans le graphe formé par les différentes régions cérébrales. Depuis les aires sensorielles comme la rétine aux aires associatives comme celle qui forment les voies visuelles jusqu’aux airs regroupant les motoneurones qui vont permettre de générer une action motrice et un comportement.
 
-* Hidden (external) and internal states of the agent are separated by action and sensory states. Both action and internal states -- encoding a conditional probability density function over hidden states -- minimise free energy. Note that hidden states in the real world and the form of their dynamics can be different from that assumed by the generative model; (this is why hidden states are in bold. )
 ""","""
-*  Active inference uses a generalisation of Kalman filtering to provide Bayes optimal estimates of hidden states and action in generalized coordinates of motion. As we have seen previously, the central nervous system has to contend with axonal delays, both at the sensory and the motor levels. Representing hidden states in generalized coordinates provides a simple way of compensating for both these delays.
 
-* This mathematical framework can be mapped to the anatomy of the visual system. Similar to the sketch that we have shown above, "compiling" (that is, solving) the equations of Free-energy minimization forms a set of coupled differential equations which correpond to different node along the visuo-oculomotor pathways.
+Nous avons contribué avec Rick Adams et Karl Friston à l’application de ce principe pour expliquer des différences entre des patients typiques et des schizophrènes. En se focalisant sur les mouvements des yeux, nous avons démontré que ce paradigme permet d’expliquer les différences dans les mouvements dit de poursuites lente [@tag:Adams12]. Il est alors remarquable d’observer en perturbant dans le modèle les gains synaptiques des voies descendantes, c’est-à-dire celle qui permet d’affiner le modèle interne de représentation du monde, ont répliqué des caractéristiques comportementales des patients schizophrènes. En particulier, ces mouvements sont expliquées dans ce modèle comme une forme de délusion, qui consiste à accorder un poids relatif exagéré aux croyances représenté par le cerveau par rapport à celle apportées par les sens. Cette approche est actuellement étendue par le docteur Richard Adams afin d’apporter à terme des solutions thérapeutiques et une meilleure compréhension de pathologies comme la schizophrénie.
 
-
-Practically, the predictive power of AI in modeling such an agent is revealed by studying deviations from the median behavior within a population of agents. For instance, there are acute differences in the smooth pursuit eye movements (SPEM) between patients from (control) neurotypic or schizophrenic groups. First, SPEM are distinct from the saccades defined above as they are voluntary eye movements which aim at stabilizing the retinal image of a smoothly moving visual object. For a target following the motion of a pendulum for instance, the eye will produce a prototypical response to follow this predictable target. Interestingly, schizophrenic agents tend to produce a different pattern of SPEM in the case that the pendulum is occluded on half cycles (for instance, as it passes behind an opaque cardboard on one side from the midline). In general, SPEM may still follow the target, as it is occluded (behind the cardboard) yet with a lower gain [@Barnes91]. As the target reappears from behind the occluder, schizophrenic agents engage more quickly to a SPEM response [@Avila06]. Extending the agent modeled in [@Friston12], an agent which has the capability to smoothly follow such moving object was modeled in [@Adams12]. This model allows in particular to understand most prototypical SPEM as a Bayes-optimal solution to minimize surprise in the perception / action loop implemented in the agent's dependency graph.
-
-Especially, by manipulating the *a priori* precision of internal beliefs at the different levels of the hierarchical model, one could reproduce different classes of SPEM behaviors which reproduce classical psychophysical stimuli. For instance, [@Adams12] found for the half-cycle occluded pendulum that manipulating the post-synaptic gain of predictive neurons reproduced behaviors observed in schizophrenia and control populations. Such a difference in the balance of information flow could have for instance a genetic origin in the expression of this gain and vicariously in the behavior of this population. Importantly, such a method thus allows to perform quantitative predictions: Such applications of computational neuroscience seem particularly relevant for a better understanding of the diversity of behaviors in the human population (see for instance [@Karvelis18autistic; @Kent19]).
 
 """]):
     s.add_slide(content=s.content_figures(
@@ -382,6 +333,7 @@ s.add_slide_outline(i_section,
 notes="""
 
 
+Au cours de notre description des mécanismes sous-tendant les illusions visuelles nous nous approchons progressivement des hallucinations. Mais à la différence des illusions visuelles, celles-ci émergent sans stimulation sensorielle. Mais comment peut-on expliquer la formation d’images hallucinées, comme celle induite par la prise de drogue ou de psychotropes? Peut-on alors identifier des mécanismes qui sont impliqués dans le cerveau, et définir une neuro-anatomie fonctionnelle qui puisse expliquer ces illusions et hallucinations dans un cadre unifié?
 
 """)
 
@@ -428,13 +380,8 @@ for no in ['2b', '2a', '3', '7']:
     height=s.meta['height']*height_ratio) + bib,
    notes="""
 
-Bressloff, P. C., Cowan, J. D., Golubitsky, M., Thomas, P. J., & Wiener, M. C. (2002). What geometric visual hallucinations tell us about the visual cortex. Neural Computation, 14(3), 473–491.
-
-
- Here, we sum- marize a theory of their origin in visual cortex (area V1), based on the assumption that the form of the retino–cortical map and the architecture of V1 determine their geometry.
-
- Using this symmetry, we show that the various patterns of activity that spontaneously emerge when V1’s spatially uniform resting state becomes unstable correspond to the form constants when transformed to the vi- sual 􏰮eld using the retino-cortical map. The results are sensitive to the detailed speci􏰮cation of the lateral connectivity and suggest that the cortical mechanisms that generate geometric visual hallucinations are closely related to those used to process edges, contours, surfaces, and textures.
-
+Une hypothèse novatrice proposée par Paul Bressloff et collègues en 2002 [@tag:Bressloff02] est de voir l’origine de certaines illusions ou hallucinations dans l'interaction entre la structure de la représentation rétinienne et des représentations de cette espace visuel dans l’aire visuelle primaire. En effet, la représentation rétinienne de l’espace visuel est organisés de façon radiale depuis le point de fixation (polaire) avec une forte densité de photorécepteurs près de l’axe de vision. La représentation corticale d’une ligne est un segment dans l’espace cortical et inversement un segment dans l’espace cortical va apparaître et être perçu comme une spirale une fois re-projetée dans l’espace visuel codé par l’espace rétinien. En se basant sur une modélisation des connexions latérales entre des populations voisines de neurones de l’aire visuelle primaire, ces auteurs ont alors établi dans un modèle de champ neural qui régit la dynamique de la carte d’activité l’émergence structurée de représentations privilégiées. Comme nous l’avons décrit à l’échelle macroscopique avec notre modèle d’agent schizophrénique [@tag:Adams12], ces auteurs ont alors analysé mathématiquement les états du système quand on perturbe certains paramètres du système, notamment les poids synaptiques régissant les interactions dans la carte corticale.
+Ils ont alors montré un point essentiel : à partir d’un certain seuil de prise de drogue, des « hallucinations » peuvent émerger comme des structures stables dans la carte corticale. Étonnamment, ces états une fois un re-projetés sur l’espace visuel dessinent des spirales et des ensembles de lignes qui sont très proches des hallucinations telles qu’elles ont été rapportées après la prise de drogues diverses allant de la marijuana au peyotl ou à la mescaline. Ce type de modélisation permet d’un côté d’expliquer la formation d’hallucinations, mais aussi de définir une « neuro-géométrie », c’est-à-dire un formalisme mathématique reliant neurosciences et la géométrie des relations existant entre des sous module de l’aire visuelle primaire. On peut aussi imaginer alors des hallucinations plus complexes émerger de réseaux plus complexes qui représentent par exemple des superpositions de visages.
 """)
 
 
@@ -533,9 +480,7 @@ s.add_slide(content=s.content_figures(
     height=s.meta['height']*height_ratio) + bib,
    notes="""
 
-In a recent study [@Chemla19], we used VSDI to record the activity of the primary visual cortex (V1) of awake macaque monkeys. Is there any difference between the response to the single dot and that to the two dots? Indeed, VSD recordings allow to record the activity of populations of V1 neurons which are approximately at the scale of a cortical column. Additionally, the recorded response is rapid enough to capture the dynamics of the lrAM stimulus. Recordings show that as the evoked activity of the second stimulus reaches V1, a cortical suppressive wave propagates toward the retinotopic wave evoked by the first dot. This was put in evidence by statistically comparing the response of the brain to the response of the two dots in isolation. In particular, we found that thanks to this suppressive wave, the activity for the brain stimulus was more precise, suggesting that such suppressive wave could serve as predictive processing step to be read-out in upstream cortical areas.
-
-In particular, we found that the activity that we recorded fitted well with a mean-field model using a dynamical gain control. Qualitatively, this model reproduced the propagation of activity on the cortex. Importantly, this model allowed to show that the observed activity was best fitted when the speed of lateral connections within the mean-field was about 1 m/s, a propagation speed which is of the order of that measured for intra-cortical connections in the primary visual cortex (for a review, see [@Muller18]). A more functional (probabilistic) model also showed that the cortical suppressive wave allowed to disambiguate the stimulus by explaining away (that is, suppressing) ambiguous alternatives. As a consequence, (1) lateral interactions are key to generate traveling waves on the surface of the cortex and (2) these waves help disambiguate the input stimulus. This corresponds to the implementation of a predictive process using an *a priori* knowledge of smoothly-moving visual objects.
+Pour aller plus loin dans cette direction, peut-on étendre cette méthodologie à la dynamique présente dans certaines illusions, comme celle du « Point-Ligne » ? En effet, en présentant un simple point puis une ligne on induit une perception d’une expansion du point pour « remplir » la ligne (un mouvement dit Phi). L’originalité de l’étude de Jancke et collègues est d'utiliser une technique d’imagerie qui permet d’enregistrer l’activité sur le cortex visuel primaire (ici du chat anesthésié) lors de la présentation de cette illusion d’optique. À noter qu’en comparant l’activité produite par les deux éléments présentés séparément ou conjointement, on met en évidence une activité différentielle qui est caractéristique de la perception de cette illusion. Une même  méthodologie permet de mettre en évidence un mécanisme original. Pour cela on utilise cette fois une illusion encore plus simple qui consiste à montrer un point à une position de l’espace visuel puis un autre point exactement similaire mais à une distance proche (mais supérieure à la taille de ce point). On perçoit alors un et un seul point qui se déplace de la première à la seconde position. Au niveau des enregistrements (cette fois chez le macaque) la réponse différentielle montre que relativement à un traitement indépendant des deux points, il existe une vague d’activité qui se déplace sur le cortex qui en particulier supprime une partie de l’activité [@tag:Chemla19]. Une modélisation sur ordinateur a permis de montrer qu'une fonction de cette vague de suppression est de lever les ambiguïtés sur les différents mouvements possibles représentés sur la carte. Dans ce cas particulier, la vague permet de supprimer la représentation d’un mouvement dans le sens opposé. Toutefois, beaucoup de questions restent en suspens. Ces résultats montrent le rôle potentiel des vagues d’activité sur la surface du cortex comme un outil potentiel de traitement de l’information et de sa modulation [@tag:Muller18]. Ces vagues peuvent en effet induire facilitations ou suppressions dans l'espace et le temps et produire une forme de « calcul » pour représenter au mieux l’image visuelle.
 
 """)
 s.close_section()
@@ -544,7 +489,7 @@ s.close_section()
 ######################################################################################################################################################s.open_section()
 s.add_slide(content=intro,
             notes="""
-
+Pour résumer, les illusions et hallucinations nous ouvre une porte sur les possibilités de la perception mais aussi sur une compréhension des mécanismes cérébraux qui les induisent. La modélisation, notamment celle que nous proposons, offre une opportunité nouvelles d’appréhender ces mécanismes. Les outils théoriques permettant de progresser dans cette voie de recherche existent mais ne sont pas pour le moment exploités à leur plein potentiel. Ils seront essentiels pour une meilleure compréhension des illusions visuelles, des hallucinations et de ce qui peut la provoquer, mais aussi du cerveau en général.
 
 * Thanks for your attention!
 """)

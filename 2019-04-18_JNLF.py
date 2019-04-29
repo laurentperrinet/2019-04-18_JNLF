@@ -542,7 +542,6 @@ if slides_filename is None:
 }}
 
 """.format(**meta))
-
 else:
     s.compile(filename=slides_filename)
 

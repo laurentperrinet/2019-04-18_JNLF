@@ -4,7 +4,7 @@ DEBUG = True
 DEBUG = False
 
 fig_width = 12
-
+ 
 import os
 home = os.environ['HOME']
 figpath_talk = 'figures'

@@ -477,7 +477,7 @@ notes="""
 
 
 bib = s.content_bib("Chemla, Reynaud, diVolo, Zerlaut, Perrinet, Destexhe and Chavane", "2019", 'Journal of Neuroscience', url="https://laurentperrinet.github.io/publication/chemla-19/")
-bib = s.content_bib("Chemla *et al*", "2019", 'Journal of Neuroscience', url="https://laurentperrinet.github.io/publication/chemla-19/")
+bib = s.content_bib("Chemla <it>et al<\it>", "2019", 'Journal of Neuroscience', url="https://laurentperrinet.github.io/publication/chemla-19/")
 
 s.add_slide(content=s.content_figures(
     [path2('Chemla_etal2019.png')], title=title, embed=s.meta['embed'],
